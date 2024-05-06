@@ -194,9 +194,21 @@ form.sign-in-form {
   padding: 3rem 17% 2rem 12%;
 }
 
+.left-panel .image {
+  /* Add or modify the positioning properties here */
+  margin-top: -170px;
+  margin-right: 0px;
+}
+
 .right-panel {
   pointer-events: none;
   padding: 3rem 12% 2rem 17%;
+}
+
+.right-panel .image {
+  /* Add or modify the positioning properties here */
+  margin-top: 40px;
+  margin-left: 10px;
 }
 
 .panel .content {
