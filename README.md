@@ -10,6 +10,7 @@
 | `Deployment Team` | Elja Gusfi Anwar |
 | `Pitch Deck Team` | Khansa Farras Callista Armandsyah |
 | `Pitch Deck Team` | Alfiyan Syahrotus Sa'adah |
+| `Pitch Deck Team` | Putri Dwi Kurnia |
 | `Quality Assurance` | Meyke Nurul Intan |
 | `Quality Assurance` | Nico Yudical Firdaus |
 | `Quality Assurance` | Buhori |
