@@ -13,9 +13,21 @@ sidebarBtn.addEventListener("click", () => {
   sidebar.classList.toggle("close");
 });
 
-const productctx = document.getElementById('productChart');
-const barColors = ["orange"];
-const xValues = ['GuttenPlans', 'EB Public Library', 'Bruinswick Sq Mall', 'Earle Asphalt'];
+[{
+  "Location": "GuttenPlans",
+  "PercentageOfTotal": "38.0"
+}, {
+  "Location": "Earle Asphalt",
+  "PercentageOfTotal": "9.0"
+}, {
+  "Location": "Brunswick Sq Mall",
+  "PercentageOfTotal": "17.0"
+}, {
+  "Location": "EB Public Library",
+  "PercentageOfTotal": "35.0"
+}]
+
+const xValues = ['GuttenPlans', 'Earle Asphalt', 'Bruinswick Sq Mall', 'EB Public Library'];
 const ctx = document.getElementById('locationChart');
 
 new Chart(ctx, {
@@ -23,55 +35,12 @@ new Chart(ctx, {
     data: {
       labels: xValues,
       datasets: [{
-        backgroundColor: barColors,
-        data: [7796.5, 7240.5, 3538, 1936.5],
+        data: [38.0, 9.0, 17.0, 35.0],
       }]
     },
     options: {
       title: {
         display: true,
-        text: "World Wide Wine Production 2018"
       }
     }
   });
-
-// new Chart(productctx, {
-//   type: 'bar',
-//   data: {
-//     labels: ['Food', 'Carbonated', 'Non Carbonated', 'Water'],
-//     datasets: [{
-//       label: 'Average',
-//       backgroundColor: barColors,
-//       data: [1.74, 2.11, 2.60, 1.82],
-//       borderWidth: 2
-//     }]
-//   },
-//   options: {
-//     scales: {
-//       y: {
-//         beginAtZero: true
-//       }
-//     }
-//   }
-// });
-
-// const ctx = document.getElementById('locationChart');
-
-// new Chart(ctx, {
-//   type: 'pie',
-//   data: {
-//     labels: ['GuttenPlans', 'EB Public Library', 'Bruinswick Sq Mall', 'Earle Asphalt'],
-//     datasets: [{
-//       data: [7796.5, 7240.5, 3538, 1936.5],
-//       borderWidth: 2
-//     }]
-//   },
-//   options: {
-//     scales: {
-//       y: {
-//         beginAtZero: true
-//       }
-//     }
-//   }
-// });
-
