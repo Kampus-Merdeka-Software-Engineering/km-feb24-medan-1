@@ -1,0 +1,13 @@
+[{
+  "Category": "Non Carbonated",
+  "AverageRetailPrice": "2.6"
+}, {
+  "Category": "Carbonated",
+  "AverageRetailPrice": "2.11"
+}, {
+  "Category": "Water",
+  "AverageRetailPrice": "1.82"
+}, {
+  "Category": "Food",
+  "AverageRetailPrice": "1.74"
+}]

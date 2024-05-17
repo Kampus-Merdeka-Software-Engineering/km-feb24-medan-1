@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <title> Dashboard Team 1 - Section Medan </title>
+  <link rel="stylesheet" href="active.css">
+  <!-- Boxiocns CDN Link -->
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!--Font Awesome CDN Link-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+  <div class="sidebar close">
+    <div class="logo-details">
+      <i class='bx bxl-codepen'></i>
+      <span class="logo_name">Vending Machine</span>
+    </div>
+    <ul class="nav-links">
+      <li>
+        <a href="index.html">
+          <i class='bx bx-grid-alt'></i>
+          <span class="link_name">Dashboard</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Dashboard</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+          <a href="#">
+            <i class='bx bx-collection'></i>
+            <span class="link_name">Category</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow'></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name" href="#">Category</a></li>
+          <li><a href="#">Product</a></li>
+          <li><a href="location.html">Location</a></li>
+          <li><a href="active.html">Active Machine</a></li>
+          <li><a href="#">Favorite Product</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="tips.html">
+          <i class='bx bx-bulb'></i>
+          <span class="link_name">Tips</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Tips</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="team.html">
+          <i class='bx bx-user-plus'></i>
+          <span class="link_name">Team</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Team</a></li>
+        </ul>
+      </li>
+    </ul>
+    <input type="checkbox" id="toggle">
+  </div>
+
+  <header>
+    <h1>Capstone Projects</h1>
+  </header>
+
+  <main>
+    <div class="main">
+      <div class="cards">
+        <div class="card">
+          <div class="card-content">
+            <div class="number">5</div>
+            <div class="card-name">Active Machine</div>
+          </div>
+          <div class="icon-box">
+            <i class="fa-solid fa-toggle-on"></i>
+          </div>
+        </div>
+      </div>
+      <div class="charts">
+        <div class="chart" id="line-chart">
+          <h2>Active Machine</h2>
+          <canvas id="ActiveChart"></canvas>
+        </div>
+        <div class="isi">
+            <article>
+                <h2>Sales Based On Active Machine</h2>
+                <br>
+                <p>In July there was the highest increase in sales of 346.5 compared to the previous month at GuttenPlans. </p>
+                <br>
+                <p> GuttenPlans and EB Public Library are ahead in sales compared to others and only have one active machine.</p>
+            </article>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; Team 1 - Section Medan 2024</p>
+  </footer>
+
+  <script src="active.js"></script>
+
+</body>
+
+</html>

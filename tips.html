@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <title> Dashboard Team 1 - Section Medan </title>
+  <link rel="stylesheet" href="style_tips.css">
+  <!-- Boxiocns CDN Link -->
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+  <div class="sidebar close">
+    <div class="logo-details">
+      <i class='bx bxl-codepen'></i>
+      <span class="logo_name">Vending Machine</span>
+    </div>
+    <ul class="nav-links">
+      <li>
+        <a href="index.html">
+          <i class='bx bx-grid-alt'></i>
+          <span class="link_name">Dashboard</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Dashboard</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+          <a href="#">
+            <i class='bx bx-collection'></i>
+            <span class="link_name">Category</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow'></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name" href="#">Category</a></li>
+          <li><a href="#">Product</a></li>
+          <li><a href="location.html">Location</a></li>
+          <li><a href="active.html">Active Machine</a></li>
+          <li><a href="#">Favorite Product</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="tips.html">
+          <i class='bx bx-bulb'></i>
+          <span class="link_name">Tips</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Tips</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="team.html">
+          <i class='bx bx-user-plus'></i>
+          <span class="link_name">Team</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Team</a></li>
+        </ul>
+      </li>
+    </ul>
+    <input type="checkbox" id="toggle">
+  </div>
+
+  <header>
+    <h1>Capstone Projects</h1>
+  </header>
+
+  <main>
+    <div class="main">
+      <div class="charts">
+        <div class="chart" id="doughnut-chart">
+
+          <table class="camp">
+            <tr>
+                <th>Increase 15% </th>
+                <th colspan="2">Revenue</th>
+            </tr>
+            <tr class="persen">
+              <th>Price in Categories:</th>
+              <th colspan="2"><i class='bx bxs-up-arrow-circle'></i> 22% (5 months)</th>
+            </tr>
+            <tr>
+                <td><p id="table"></p></td>
+                <td><p id="table2"></p></td>
+                <td><p id="table3"></p></td>
+            </tr>
+          </table>
+          <canvas></canvas>
+        </div>
+        <div class="isi">
+            <aside>
+                <h3>Food, carbonated, non-carbonated price increase 15% in the next 5 months, revenue could increase 22%</h3>
+                <br>
+                <div class="after">
+                    <h1>$19,481</h1><p>Total Price After</p>
+                </div>
+                <div class="before">
+                    <h1>$9,481</h1><p>Total Price Before</p>
+                </div>
+                <br>
+            </aside>
+        </div
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; Team 1 - Section Medan 2024</p>
+  </footer>
+
+  <script src="script_tips.js"></script>
+
+</body>
+
+</html>
