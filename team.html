@@ -1,117 +1,307 @@
 <!DOCTYPE html>
-<!-- Coding By CodingNepal - youtube.com/codingnepal -->
-<html lang="en" dir="ltr">
+<html lang="en" data-bs-theme="dark">
 
 <head>
-  <meta charset="utf-8">
-  <title>Infinite Card Slider JavaScript | CodingNepal</title>
-  <link rel="stylesheet" href="team.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Fontawesome Link for Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-  <script src="team.js" defer></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team 1 - Section Medan</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+    <script src="https://kit.fontawesome.com/ae360af17e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/team.css">
 </head>
 
 <body>
-
-  <div class="sidebar close">
-    <div class="logo-details">
-      <i class='bx bxl-codepen'></i>
-      <span class="logo_name">Content</span>
-    </div>
-    <ul class="nav-links">
-      <li>
-        <a href="index.html">
-          <i class='bx bx-grid-alt'></i>
-          <span class="link_name">Dashboard</span>
-        </a>
-        <ul class="sub-menu blank">
-          <li><a class="link_name" href="#">Dashboard</a></li>
-        </ul>
-      </li>
-      <li>
-        <div class="iocn-link">
-          <a href="#">
-            <i class='bx bx-collection'></i>
-            <span class="link_name">Category</span>
-          </a>
-          <i class='bx bxs-chevron-down arrow'></i>
+    <div class="wrapper">
+        <aside id="sidebar" class="js-sidebar">
+            <!-- Content For Sidebar -->
+            <div class="h-100">
+                <div class="sidebar-logo">
+                    <a href="#">Content</a>
+                </div>
+                <ul class="sidebar-nav">
+                    <li class="sidebar-header">
+                        Menu
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="index.html" class="sidebar-link">
+                            <i class="fa-solid fa-layer-group pe-2"></i>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link collapsed" data-bs-target="#pages" data-bs-toggle="collapse"
+                            aria-expanded="false"><i class="fa-solid fa-chart-simple pe-2"></i>
+                            Category
+                        </a>
+                        <ul id="pages" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                            <li class="sidebar-item">
+                                <a href="product.html" class="sidebar-link">Product</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="location.html" class="sidebar-link">Location</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="activemachine.html" class="sidebar-link">Active Machine</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="favoriteproduct.html" class="sidebar-link">Favorite Product</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="recommendation.html" class="sidebar-link collapsed" aria-expanded="false"><i
+                                class="fa-solid fa-lightbulb pe-2"></i>
+                            Recommendation
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="team.html" class="sidebar-link collapsed" aria-expanded="false"><i
+                                class="fa-regular fa-user pe-2"></i>
+                            Team
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <div class="main">
+            <nav class="navbar navbar-expand px-3 border-bottom">
+                <button class="btn" id="sidebar-toggle" type="button">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </nav>
+            <main class="content px-3 py-2">
+                <div class="container-fluid">
+                    <div class="mb-3" style="font-weight: 800; font-size:21px">
+                        <h4>Capstone Project</h4>
+                    </div>
+                </div>
+                <div class="card border-0">
+                    <div class="card-header" style="margin-top:5px">
+                        <h5 class="card-title" style="text-align: center; justify-content:center; font-weight:800">
+                            Our Great Team
+                        </h5>
+                    </div>
+                </div>
+                <div class="card-container2">
+                    <div class="card2">
+                        <div class="circle">
+                            <div class="imgBox">
+                                <img src="image/amel.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="content2">
+                            <h3>Amalia Nurpalah</h3>
+                            <div class="textIcon2">
+                                <h4>Team Leader</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card2">
+                        <div class="circle">
+                            <div class="imgBox">
+                                <img src="image/elja.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="content2">
+                            <h3>Elja Gusfi Anwar</h3>
+                            <div class="textIcon2">
+                                <h4>Deployment Team</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card2">
+                        <div class="circle">
+                            <div class="imgBox">
+                                <img src="image/nada.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="content2">
+                            <h3>Nada Aghnia</h3>
+                            <div class="textIcon2">
+                                <h4>Deployment Team</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card2">
+                        <div class="circle">
+                            <div class="imgBox">
+                                <img src="image/meyke.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="content2">
+                            <h3>Meyke Nurul Intan</h3>
+                            <div class="textIcon2">
+                                <h4>Quality Assurance</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card2">
+                        <div class="circle">
+                            <div class="imgBox">
+                                <img src="image/nico.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="content2">
+                            <h3>Nico Yudical Firdaus</h3>
+                            <div class="textIcon2">
+                                <h4>Quality Assurance</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card2">
+                        <div class="circle">
+                            <div class="imgBox">
+                                <img src="image/buhori.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="content2">
+                            <h3>Buhori</h3>
+                            <div class="textIcon2">
+                                <h4>Quality Assurance</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card2">
+                        <div class="circle">
+                            <div class="imgBox">
+                                <img src="image/candra.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="content2">
+                            <h3>Candra Zacky Firmansyah</h3>
+                            <div class="textIcon2">
+                                <h4>Front-end Engineer</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card2">
+                        <div class="circle">
+                            <div class="imgBox">
+                                <img src="image/farid.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="content2">
+                            <h3>Farid Irsyad Gunawan</h3>
+                            <div class="textIcon2">
+                                <h4>Front-end Engineer</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card2">
+                        <div class="circle">
+                            <div class="imgBox">
+                                <img src="image/shafa.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="content2">
+                            <h3>Shafa Edfinanda Maghfira</h3>
+                            <div class="textIcon2">
+                                <h4>Front-end Engineer</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card2">
+                        <div class="circle">
+                            <div class="imgBox">
+                                <img src="image/robby.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="content2">
+                            <h3>Robby Alamsyah S. P.</h3>
+                            <div class="textIcon2">
+                                <h4>Front-end Engineer</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card2">
+                        <div class="circle">
+                            <div class="imgBox">
+                                <img src="image/alfiyan.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="content2">
+                            <h3>Alfiyan Syahrotus Sa'adah</h3>
+                            <div class="textIcon2">
+                                <h4>Pitch Deck Team</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card2">
+                        <div class="circle">
+                            <div class="imgBox">
+                                <img src="image/khansa.jpeg" alt="">
+                            </div>
+                        </div>
+                        <div class="content2">
+                            <h3>Khansa Farras Callista A.</h3>
+                            <div class="textIcon2">
+                                <h4>Pitch Deck Team</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card2">
+                        <div class="circle">
+                            <div class="imgBox">
+                                <img src="image/puput.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="content2">
+                            <h3>Putri Dwi Kurnia</h3>
+                            <div class="textIcon2">
+                                <h4>Pitch Deck Team</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card2">
+                        <div class="circle">
+                            <div class="imgBox">
+                                <img src="image/elja.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="content2">
+                            <h3>Rayditto Makalalag</h3>
+                            <div class="textIcon2">
+                                <h4>Section Manager</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card2">
+                        <div class="circle">
+                            <div class="imgBox">
+                                <img src="image/nada.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="content2">
+                            <h3>Rachmad Syaefullah</h3>
+                            <div class="textIcon2">
+                                <h4>Mentor</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <a href="#" class="theme-toggle">
+                <i class="fa-regular fa-moon"></i>
+                <i class="fa-regular fa-sun"></i>
+            </a>
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row text-muted">
+                        <div class="col-6 text-start">
+                            <p class="mb-0">
+                                <a href="#" class="text-muted">
+                                    <strong>&copy;Team 1 - Section Medan</strong>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
         </div>
-        <ul class="sub-menu">
-          <li><a class="link_name" href="#">Category</a></li>
-          <li><a href="#">Product</a></li>
-          <li><a href="#">Location</a></li>
-          <li><a href="#">Active Machine</a></li>
-          <li><a href="#">Favorite Product</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#">
-          <i class='bx bx-bulb'></i>
-          <span class="link_name">Tips</span>
-        </a>
-        <ul class="sub-menu blank">
-          <li><a class="link_name" href="#">Tips</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="team.html">
-          <i class='bx bx-user-plus'></i>
-          <span class="link_name">Team</span>
-        </a>
-        <ul class="sub-menu blank">
-          <li><a class="link_name" href="#">Team</a></li>
-        </ul>
-      </li>
-    </ul>
-    <input type="checkbox" id="toggle">
-  </div>
-
-  <header>
-    <h1>Capstone Projects</h1>
-  </header>
-
-  <footer>
-    <p>&copy; Team 1 - Section Medan 2024</p>
-  </footer>
-
-  <div class="wrapper">
-    <i id="left" class="fa-solid fa-angle-left"></i>
-    <ul class="carousel">
-      <li class="card">
-        <div class="img"><img src="images/img-1.jpg" alt="img" draggable="false"></div>
-        <h2>Blanche Pearson</h2>
-        <span>Sales Manager</span>
-      </li>
-      <li class="card">
-        <div class="img"><img src="images/img-2.jpg" alt="img" draggable="false"></div>
-        <h2>Joenas Brauers</h2>
-        <span>Web Developer</span>
-      </li>
-      <li class="card">
-        <div class="img"><img src="images/img-3.jpg" alt="img" draggable="false"></div>
-        <h2>Lariach French</h2>
-        <span>Online Teacher</span>
-      </li>
-      <li class="card">
-        <div class="img"><img src="images/img-4.jpg" alt="img" draggable="false"></div>
-        <h2>James Khosravi</h2>
-        <span>Freelancer</span>
-      </li>
-      <li class="card">
-        <div class="img"><img src="images/img-5.jpg" alt="img" draggable="false"></div>
-        <h2>Kristina Zasiadko</h2>
-        <span>Bank Manager</span>
-      </li>
-      <li class="card">
-        <div class="img"><img src="images/img-6.jpg" alt="img" draggable="false"></div>
-        <h2>Donald Horton</h2>
-        <span>App Designer</span>
-      </li>
-    </ul>
-    <i id="right" class="fa-solid fa-angle-right"></i>
-  </div>
-
+    </div>
 </body>
 
 </html>
