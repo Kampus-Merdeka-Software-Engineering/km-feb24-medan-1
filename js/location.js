@@ -40,6 +40,8 @@ document.addEventListener('DOMContentLoaded', function () {
             rawData = data;
             updateTotalValues();
             updateLocationPieChart('all');
+            updateTotalProductsSold();
+            updateAverageSales();
         })
         .catch(error => console.error('Error loading the JSON data:', error));
 
@@ -53,7 +55,6 @@ document.addEventListener('DOMContentLoaded', function () {
     function updateTotalValues() {
         let totalRevenue = 0;
         let totalQuantity = 0;
-        let totalSales = 0;
 
         rawData.forEach(item => {
             if (!item.TransTotal || !item.MQty) {
@@ -63,12 +64,44 @@ document.addEventListener('DOMContentLoaded', function () {
 
             totalRevenue += parseFloat(item.TransTotal);
             totalQuantity += parseInt(item.MQty);
-            totalSales += parseFloat(item.LineTotal);
         });
 
         document.getElementById('totalRevenue').textContent = totalRevenue.toLocaleString();
         document.getElementById('totalQuantity').textContent = totalQuantity.toLocaleString();
-        document.getElementById('totalSales').textContent = totalSales.toLocaleString();
+    }
+
+    function updateAverageSales() {
+        let totalRevenue = 0;
+        let count = 0;
+
+        rawData.forEach(item => {
+            if (!item.TransTotal) {
+                console.warn('Incomplete item data:', item);
+                return;
+            }
+
+            totalRevenue += parseFloat(item.TransTotal);
+            count++;
+        });
+
+        const averageSales = totalRevenue / count;
+        document.getElementById('averageSales').textContent = averageSales.toFixed(2);
+    }
+
+    function updateTotalProductsSold() {
+        let productSet = new Set();
+
+        rawData.forEach(item => {
+            if (!item.Product) {
+                console.warn('Incomplete item data:', item);
+                return;
+            }
+
+            productSet.add(item.Product);
+        });
+
+        const totalProductsSold = productSet.size;
+        document.getElementById('totalProductsSold').textContent = totalProductsSold.toLocaleString();
     }
 
     function updateLocationPieChart(selectedCategory) {
