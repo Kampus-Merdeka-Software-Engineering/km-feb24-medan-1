@@ -322,6 +322,10 @@ a.sidebar-link {
     footer {
         width: 100vw;
     }
+
+    .card-container2 {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Theme Toggler */
