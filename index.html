@@ -58,6 +58,12 @@
                         </a>
                     </li>
                     <li class="sidebar-item">
+                        <a href="data.html" class="sidebar-link collapsed" aria-expanded="false"><i
+                                class="fa-solid fa-database pe-2  "></i>
+                            Data
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
                         <a href="team.html" class="sidebar-link collapsed" aria-expanded="false"><i
                                 class="fa-regular fa-user pe-2  "></i>
                             Team
@@ -186,6 +192,7 @@
                             <h6 class="card-subtitle text-muted" style="text-align: center;">
                                 Sales Chart
                             </h6>
+                            <p style="margin-bottom: 0;">Filter by Categories</p>
                             <select id="categoryFilter">
                                 <option value="all">All</option>
                                 <option value="Food">Food</option>
@@ -208,7 +215,7 @@
                                     <h2>Top 10 Favorite Product</h2>
                                     <canvas id="productBarChart"></canvas>
                                 </div>
-                                <div class="chart">
+                                <div class="chart" style="height: 500px;">
                                     <h2>Average Product Price</h2>
                                     <canvas id="averagePriceChart"></canvas>
                                 </div>
@@ -216,6 +223,16 @@
                                     <h2>Based On Active Machine</h2>
                                     <input type="text" id="machineSearch" placeholder="Search Machine"
                                         style="margin-bottom: 20px; width: 100%;">
+                                    <div class="filter-section">
+                                        <label for="monthFilter" style="margin-right: 10px;">Filter by Quarter:</label>
+                                        <select id="monthFilter" style="margin-bottom: 20px;">
+                                            <option value="all">All</option>
+                                            <option value="1-3">January - March</option>
+                                            <option value="4-6">April - June</option>
+                                            <option value="7-9">July - September</option>
+                                            <option value="10-12">October - December</option>
+                                        </select>
+                                    </div>
                                     <canvas id="machineMonthChart"></canvas>
                                 </div>
                             </div>
