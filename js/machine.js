@@ -1,35 +1,3 @@
-const sidebarToggle = document.querySelector("#sidebar-toggle");
-sidebarToggle.addEventListener("click", function () {
-    document.querySelector("#sidebar").classList.toggle("collapsed");
-});
-
-document.querySelector(".theme-toggle").addEventListener("click", () => {
-    toggleLocalStorage();
-    toggleRootClass();
-});
-
-function toggleRootClass() {
-    const current = document.documentElement.getAttribute('data-bs-theme');
-    const inverted = current == 'dark' ? 'light' : 'dark';
-    document.documentElement.setAttribute('data-bs-theme', inverted);
-}
-
-function toggleLocalStorage() {
-    if (isLight()) {
-        localStorage.removeItem("light");
-    } else {
-        localStorage.setItem("light", "set");
-    }
-}
-
-function isLight() {
-    return localStorage.getItem("light");
-}
-
-if (isLight()) {
-    toggleRootClass();
-}
-
 document.addEventListener('DOMContentLoaded', function () {
     let rawData = [];
     let machineMonthChart;
@@ -47,39 +15,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const colors = ['#FFC94A', '#8644A2', '#ff007b', '#ff9933', '#7AA2E3', '#dc3545', '#ffc107', '#6c757d', '#17a2b8', '#6610f2'];
 
+    const machineSearchInput = document.getElementById('machineSearch');
 
     document.getElementById('machineSearchForm').addEventListener('submit', function (event) {
         event.preventDefault();
-        const searchQuery = document.getElementById('machineSearch').value.toLowerCase();
-        if (searchQuery) {
-            updateMachineChart(searchQuery);
-        } else {
-            document.getElementById('machineSearch').classList.add('invalid');
-        }
-    });
-
-    document.getElementById('machineSearch').addEventListener('input', function () {
-        const searchQuery = this.value.toLowerCase();
+        const searchQuery = machineSearchInput.value.toLowerCase();
         updateMachineChart(searchQuery);
-        toggleSearchButton();
     });
 
-    function toggleSearchButton() {
-        const searchButton = document.getElementById('searchButton');
-        const refreshButton = document.getElementById('refreshButton');
-        if (document.getElementById('machineSearch').value === '') {
-            searchButton.style.display = 'inline-block';
-            refreshButton.style.display = 'none';
-        } else {
-            searchButton.style.display = 'none';
-            refreshButton.style.display = 'inline-block';
+    machineSearchInput.addEventListener('input', function () {
+        const searchQuery = machineSearchInput.value.toLowerCase();
+        if (!searchQuery) {
+            updateMachineChart('');
         }
-    }
-
-    document.getElementById('refreshButton').addEventListener('click', function () {
-        document.getElementById('machineSearch').value = '';
-        document.getElementById('machineSearch').classList.remove('invalid');
-        updateMachineChart('');
     });
 
     function updateTotalValues() {
