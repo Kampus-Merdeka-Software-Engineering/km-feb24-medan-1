@@ -47,6 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const colors = ['#FFC94A', '#8644A2', '#ff007b', '#ff9933', '#7AA2E3', '#dc3545', '#ffc107', '#6c757d', '#17a2b8', '#6610f2'];
 
+
     document.getElementById('machineSearchForm').addEventListener('submit', function (event) {
         event.preventDefault();
         const searchQuery = document.getElementById('machineSearch').value.toLowerCase();
@@ -56,6 +57,24 @@ document.addEventListener('DOMContentLoaded', function () {
             document.getElementById('machineSearch').classList.add('invalid');
         }
     });
+
+    document.getElementById('machineSearch').addEventListener('input', function () {
+        const searchQuery = this.value.toLowerCase();
+        updateMachineChart(searchQuery);
+        toggleSearchButton();
+    });
+
+    function toggleSearchButton() {
+        const searchButton = document.getElementById('searchButton');
+        const refreshButton = document.getElementById('refreshButton');
+        if (document.getElementById('machineSearch').value === '') {
+            searchButton.style.display = 'inline-block';
+            refreshButton.style.display = 'none';
+        } else {
+            searchButton.style.display = 'none';
+            refreshButton.style.display = 'inline-block';
+        }
+    }
 
     document.getElementById('refreshButton').addEventListener('click', function () {
         document.getElementById('machineSearch').value = '';
