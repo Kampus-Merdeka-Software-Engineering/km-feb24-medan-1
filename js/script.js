@@ -60,6 +60,11 @@ document.addEventListener('DOMContentLoaded', function () {
         updateMachineChart(searchQuery);
     });
 
+    document.getElementById('monthFilter').addEventListener('change', function () {
+        const selectedQuarter = this.value;
+        updateMachineChart('', selectedQuarter);
+    });
+
     function updateTotalValues() {
         let totalRevenue = 0;
         let totalQuantity = 0;
@@ -223,7 +228,6 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
 
-
         function prepareDataForAveragePriceChart(averagePrices) {
             const categories = Object.keys(averagePrices);
             const prices = categories.map(category => averagePrices[category]);
@@ -335,6 +339,7 @@ document.addEventListener('DOMContentLoaded', function () {
             type: 'bar',
             data: averagePriceData,
             options: {
+                maintainAspectRatio: false,
                 responsive: true,
                 plugins: {
                     legend: {
@@ -396,7 +401,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     }
 
-    function updateMachineChart(searchQuery) {
+    function updateMachineChart(searchQuery, selectedQuarter = 'all') {
         const salesByMachineAndMonth = {};
 
         rawData.forEach(item => {
@@ -412,11 +417,25 @@ document.addEventListener('DOMContentLoaded', function () {
             const year = date.getFullYear();
             const amount = parseFloat(item.TransTotal);
 
-            if (year === 2022 && machineLowerCase.includes(searchQuery)) { // Filter for the year 2022 and search query
+            let monthStart = 0;
+            let monthEnd = 11; // Default to all months
+
+            if (selectedQuarter !== 'all') {
+                const [start, end] = selectedQuarter.split('-').map(Number);
+                monthStart = start - 1;
+                monthEnd = end - 1;
+            }
+
+            if (year === 2022 && machineLowerCase.includes(searchQuery) && month >= monthStart && month <= monthEnd) { // Filter for the year 2022 and search query
                 if (!salesByMachineAndMonth[machine]) {
                     salesByMachineAndMonth[machine] = Array(12).fill(0);
                 }
                 salesByMachineAndMonth[machine][month] += amount;
+            }
+
+            // Adjust data for "EB Public Library x1380" to start from March
+            if (salesByMachineAndMonth["EB Public Library x1380"]) {
+                salesByMachineAndMonth["EB Public Library x1380"] = ['', '', ...salesByMachineAndMonth["EB Public Library x1380"].slice(2)];
             }
         });
 
@@ -429,12 +448,28 @@ document.addEventListener('DOMContentLoaded', function () {
         const datasetMachineMonth = [];
 
         machineLabels.forEach((machine, index) => {
+            const filteredData = salesByMachineAndMonth[machine].filter((value, month) => {
+                if (selectedQuarter !== 'all') {
+                    const [start, end] = selectedQuarter.split('-').map(Number);
+                    return (month + 1 >= start && month + 1 <= end) && value !== 0;
+                }
+                return value !== 0;
+            });
+
             datasetMachineMonth.push({
                 label: machine,
-                data: salesByMachineAndMonth[machine],
+                data: filteredData,
                 borderColor: colors[index % colors.length],
                 fill: false,
             });
+        });
+
+        const filteredMonths = months.filter((_, index) => {
+            if (selectedQuarter !== 'all') {
+                const [start, end] = selectedQuarter.split('-').map(Number);
+                return (index + 1 >= start && index + 1 <= end);
+            }
+            return true;
         });
 
         const ctxLine = document.getElementById('machineMonthChart').getContext('2d');
@@ -444,7 +479,7 @@ document.addEventListener('DOMContentLoaded', function () {
         machineMonthChart = new Chart(ctxLine, {
             type: 'line',
             data: {
-                labels: months,
+                labels: filteredMonths,
                 datasets: datasetMachineMonth
             },
             options: {
