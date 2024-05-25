@@ -1,4 +1,4 @@
-# KM Feb 24 - Team 2 Section Medan
+# KM Feb 24 - Team 1 Section Medan
 | Rola | Name |
 | --- | --- |
 | `Project Leader` | Amalia Nurpalah |
