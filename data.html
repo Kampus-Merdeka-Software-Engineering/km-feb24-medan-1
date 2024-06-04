@@ -1,142 +1,150 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="dark">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team 1 - Section Medan</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css">
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.7/css/dataTables.bootstrap5.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
-    <script src="https://kit.fontawesome.com/ae360af17e.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Dashboard VM</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Box Icons  -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Styles  -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.css">
+    <link rel="shortcut icon" href="assets/img/vending-machine3.png" type="image/x-icon" style="height: max-content;">
 </head>
 
 <body>
-    <div class="wrapper">
-        <aside id="sidebar" class="js-sidebar">
-            <!-- Content For Sidebar -->
-            <div class="h-100">
-                <div class="sidebar-logo">
-                    <a href="#">Content</a>
+    <div class="sidebar close">
+        <!-- ========== Logo ============  -->
+        <a href="#" class="logo-box">
+            <i class='bx bxl-microsoft'></i>
+            <div class="logo-name">Menu</div>
+        </a>
+
+        <!-- ========== List ============  -->
+        <ul class="sidebar-list">
+            <!-- -------- Non Dropdown List Item ------- -->
+            <li id="menu-dashboard">
+                <div class="title">
+                    <a href="index.html" class="link">
+                        <i class='bx bx-grid-alt'></i>
+                        <span class="name">Dashboard</span>
+                    </a>
                 </div>
-                <ul class="sidebar-nav">
-                    <li class="sidebar-header">
-                        Menu
-                    </li>
-                    <li class="sidebar-item">
-                        <a href="index.html" class="sidebar-link">
-                            <i class="fa-solid fa-layer-group pe-2"></i>
-                            Dashboard
-                        </a>
-                    </li>
-                    <li class="sidebar-item">
-                        <a href="#" class="sidebar-link collapsed" data-bs-target="#pages" data-bs-toggle="collapse"
-                            aria-expanded="false"><i class="fa-solid fa-chart-simple pe-2"></i>
-                            Category
-                        </a>
-                        <ul id="pages" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-                            <li class="sidebar-item">
-                                <a href="product.html" class="sidebar-link">Product</a>
-                            </li>
-                            <li class="sidebar-item">
-                                <a href="location.html" class="sidebar-link">Location</a>
-                            </li>
-                            <li class="sidebar-item">
-                                <a href="activemachine.html" class="sidebar-link">Active Machine</a>
-                            </li>
-                            <li class="sidebar-item">
-                                <a href="favoriteproduct.html" class="sidebar-link">Favorite Product</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="sidebar-item">
-                        <a href="recommendation.html" class="sidebar-link collapsed" aria-expanded="false"><i
-                                class="fa-solid fa-lightbulb pe-2"></i>
-                            Recommendation
-                        </a>
-                    </li>
-                    <li class="sidebar-item">
-                        <a href="data.html" class="sidebar-link collapsed" aria-expanded="false"><i
-                                class="fa-solid fa-database pe-2  "></i>
-                            Data
-                        </a>
-                    </li>
-                    <li class="sidebar-item">
-                        <a href="team.html" class="sidebar-link collapsed" aria-expanded="false"><i
-                                class="fa-regular fa-user pe-2"></i>
-                            Team
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </aside>
-        <div class="main">
-            <nav class="navbar navbar-expand px-3 border-bottom">
-                <button class="btn" id="sidebar-toggle" type="button">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </nav>
-            <main class="content px-3 py-2">
-                <div class="container-fluid">
-                    <div class="mb-3">
-                        <h4>Capstone Project</h4>
-                    </div>
-                    <div class="card border-0">
-                        <div class="card-header" style="margin-top:5px">
-                            <h5 class="card-title" style="text-align: center; justify-content:center; font-weight:800">
-                                Data Table
-                            </h5>
-                        </div>
-                    </div>
-                    <div class="card" style="border-radius: 10; padding:20px">
-                        <div class="container2">
-                            <table id="example" class="table table-striped table-bordered" style="width:100%;">
-                                <thead>
-                                    <tr>
-                                        <th>Category</th>
-                                        <th>Product</th>
-                                        <th>Location</th>
-                                        <th>Machine</th>
-                                        <th>Transaction Date</th>
-                                        <th>Total Transaction</th>
-                                        <th>Quantity</th>
-                                    </tr>
-                                </thead>
-                            </table>
-                        </div>
-                    </div>
+                <div class="submenu">
+                    <a href="index.html" class="link submenu-title">Dashboard</a>
                 </div>
-            </main>
-            <a href="#" class="theme-toggle">
-                <i class="fa-regular fa-moon"></i>
-                <i class="fa-regular fa-sun"></i>
-            </a>
-            <footer class="footer">
-                <div class="container-fluid">
-                    <div class="row text-muted">
-                        <div class="col-6 text-start">
-                            <p class="mb-0">
-                                <a href="#" class="text-muted">
-                                    <strong>&copy;Team 1 - Section Medan</strong>
-                                </a>
-                            </p>
-                        </div>
-                    </div>
+            </li>
+
+            <!-- -------- Dropdown List Item ------- -->
+            <li id="menu-category" class="dropdown">
+                <div class="title">
+                    <a href="#" class="link">
+                        <i class='bx bx-line-chart'></i>
+                        <span class="name">Category</span>
+                    </a>
+                    <i class='bx bxs-chevron-down'></i>
                 </div>
-            </footer>
-        </div>
+                <div class="submenu">
+                    <a href="#" class="link submenu-title">Category</a>
+                    <a href="product.html" class="link">Product</a>
+                    <a href="location.html" class="link">Location</a>
+                    <a href="machine.html" class="link">Active Machine</a>
+                    <a href="favorite.html" class="link">Favorite Product</a>
+                </div>
+            </li>
+
+            <!-- -------- Non Dropdown List Item ------- -->
+            <li id="menu-data">
+                <div class="title">
+                    <a href="data.html" class="link">
+                        <i class='bx bx-data'></i>
+                        <span class="name">Data</span>
+                    </a>
+                </div>
+                <div class="submenu">
+                    <a href="data.html" class="link submenu-title">Data</a>
+                </div>
+            </li>
+
+            <!-- -------- Non Dropdown List Item ------- -->
+            <li id="menu-recommendation">
+                <div class="title">
+                    <a href="recommendation.html" class="link">
+                        <i class='bx bx-bulb'></i>
+                        <span class="name">Recommendation</span>
+                    </a>
+                </div>
+                <div class="submenu">
+                    <a href="recommendation.html" class="link submenu-title">Recommendation</a>
+                </div>
+            </li>
+
+            <!-- -------- Non Dropdown List Item ------- -->
+            <li id="menu-team">
+                <div class="title">
+                    <a href="team.html" class="link">
+                        <i class='bx bx-user'></i>
+                        <span class="name">Team</span>
+                    </a>
+                </div>
+                <div class="submenu">
+                    <a href="team.html" class="link submenu-title">Team</a>
+                </div>
+            </li>
+        </ul>
     </div>
+
+    <!-- ============= Home Section =============== -->
+    <section class="home">
+        <div class="toggle-sidebar">
+            <i class='bx bx-menu'></i>
+
+            <!-- =========== Header ============= -->
+            <header>
+                <div class="text">Capstone Project</div>
+            </header>
+        </div>
+        <!-- Garis horizontal -->
+        <hr class="content-divider">
+
+        <main>
+            <div class="chart-container" style="margin-top:40px;">
+                <h1>Data Table</h1>
+                <p>"Vending Machine Sales "</p>
+                <table id="example" class="stripe" style="width:100%;">
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Product</th>
+                            <th>Location</th>
+                            <th>Machine</th>
+                            <th>Transaction Date</th>
+                            <th>Total Transaction</th>
+                            <th>Quantity</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </main>
+
+        <!-- ===== Footer ===== -->
+        <div class="footer">
+            <footer>&copy;Team 1 - Section Medan</footer>
+        </div>
+    </section>
+
+    <!-- Theme Toggle Button -->
+    <button id="theme-toggle" class="theme-toggle">
+        <i class='bx bx-moon'></i>
+    </button>
+
+    <!-- Link JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.2/moment.min.js"></script>
-    <script src="https://cdn.datatables.net/2.0.7/js/dataTables.js"></script>
-    <script src="https://cdn.datatables.net/2.0.7/js/dataTables.bootstrap5.js"></script>
-    <script src="js/data.js"></script>
+    <script src="https://cdn.datatables.net/2.0.8/js/dataTables.js"></script>
+    <script src="assets/js/data.js"></script>
+
 </body>
 
 </html>
