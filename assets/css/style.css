@@ -21,7 +21,7 @@
 
 /* Variables  */
 :root {
-    --color_Purple: #e23ff1;
+    --color_Purple: #874CCC;
     --color_Dark1: #1e1e1e;
     --color_Dark2: #252527;
     --color_Light1: #dfdfdf;
@@ -392,11 +392,11 @@
 }
 
 .dark-mode .logo-box:hover i {
-    color: #e23ff1;
+    color: #874CCC;
 }
 
 .light-mode .logo-box:hover i {
-    color: #e23ff1;
+    color: #874CCC;
 }
 
 .theme-toggle {
