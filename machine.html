@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard VM</title>
+
+    <!-- Box Icons  -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Styles  -->
+    <link rel="shortcut icon" href="assets/img/vending-machine3.png" type="image/x-icon" style="height: max-content;">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .dark-mode #machineSearchForm button {
+            background: #252525;
+            color: #ffffff;
+            border-color: #ffffff;
+        }
+
+        .dark-mode #machineSearchForm button:hover {
+            border-color: #ff1ce8;
+        }
+
+        #machineSearchForm button {
+            height: 30px;
+            margin-left: 10px;
+            border-radius: 5px;
+            padding: 0 5px;
+        }
+
+        #machineSearchForm button:hover {
+            border-color: #ff1ce8;
+        }
+
+        .toggle-button {
+            font-weight: 800;
+            position: absolute;
+            height: 35px;
+            padding: 5px;
+            right: 0;
+            margin-right: 50px;
+            background-color: #ff1ce8;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .toggle-button:hover {
+            background-color: #a82f9e;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sidebar close">
+        <!-- ========== Logo ============  -->
+        <a href="#" class="logo-box">
+            <i class='bx bxl-microsoft'></i>
+            <div class="logo-name">Menu</div>
+        </a>
+
+        <!-- ========== List ============  -->
+        <ul class="sidebar-list">
+            <!-- -------- Non Dropdown List Item ------- -->
+            <li id="menu-dashboard">
+                <div class="title">
+                    <a href="index.html" class="link">
+                        <i class='bx bx-grid-alt'></i>
+                        <span class="name">Dashboard</span>
+                    </a>
+                </div>
+                <div class="submenu">
+                    <a href="index.html" class="link submenu-title">Dashboard</a>
+                </div>
+            </li>
+
+            <!-- -------- Dropdown List Item ------- -->
+            <li id="menu-category" class="dropdown">
+                <div class="title">
+                    <a href="#" class="link">
+                        <i class='bx bx-line-chart'></i>
+                        <span class="name">Category</span>
+                    </a>
+                    <i class='bx bxs-chevron-down'></i>
+                </div>
+                <div class="submenu">
+                    <a href="#" class="link submenu-title">Category</a>
+                    <a href="product.html" id="subitem1" class="link">Product</a>
+                    <a href="location.html" id="subitem2" class="link">Location</a>
+                    <a href="machine.html" id="subitem3" class="link">Active Machine</a>
+                    <a href="favorite.html" id="subitem4" class="link">Favorite Product</a>
+                </div>
+            </li>
+
+            <!-- -------- Non Dropdown List Item ------- -->
+            <li id="menu-data">
+                <div class="title">
+                    <a href="data.html" class="link">
+                        <i class='bx bx-data'></i>
+                        <span class="name">Data</span>
+                    </a>
+                </div>
+                <div class="submenu">
+                    <a href="data.html" class="link submenu-title">Data</a>
+                </div>
+            </li>
+
+            <!-- -------- Non Dropdown List Item ------- -->
+            <li id="menu-recommendation">
+                <div class="title">
+                    <a href="recommendation.html" class="link">
+                        <i class='bx bx-bulb'></i>
+                        <span class="name">Recommendation</span>
+                    </a>
+                </div>
+                <div class="submenu">
+                    <a href="recommendation.html" class="link submenu-title">Recommendation</a>
+                </div>
+            </li>
+
+            <!-- -------- Non Dropdown List Item ------- -->
+            <li id="menu-team">
+                <div class="title">
+                    <a href="team.html" class="link">
+                        <i class='bx bx-user'></i>
+                        <span class="name">Team</span>
+                    </a>
+                </div>
+                <div class="submenu">
+                    <a href="team.html" class="link submenu-title">Team</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- ============= Home Section =============== -->
+    <section class="home">
+        <div class="toggle-sidebar">
+            <i class='bx bx-menu'></i>
+
+            <!-- =========== Header ============= -->
+            <header>
+                <div class="text">Capstone Project</div>
+            </header>
+        </div>
+        <!-- Garis horizontal -->
+        <hr class="content-divider">
+
+        <main>
+            <!-- Card Container -->
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="number" id="totalRevenue">0</div>
+                        <div class="card-name">Total Revenue</div>
+                    </div>
+                    <div class="icon-box">
+                        <i class="bx bx-dollar" style="font-size: 80px;"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <div class="number" id="totalQuantity">0</div>
+                        <div class="card-name">Quantity</div>
+                    </div>
+                    <div class="icon-box">
+                        <i class="bx bx-archive-in" style="font-size: 80px;"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <div id="totalProductsSold" class="number">0</div>
+                        <div class="card-name">Total Product</div>
+                    </div>
+                    <div class="icon-box">
+                        <i class="bx bx-shopping-bag" style="font-size: 80px;"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <div id="averageSales" class="number">0</div>
+                        <div class="card-name">AVG Sales</div>
+                    </div>
+                    <div class="icon-box">
+                        <i class="bx bx-chart" style="font-size: 80px;"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="chart-container">
+                <button class="toggle-button" onclick="toggleConclusion()">Conclusion</button>
+                <h1>Vending Machine</h1>
+                <p>"Sales Chart"</p>
+                <div class="charts">
+                    <div class="chart">
+                        <h2>Based On Active Machine</h2>
+                        <form id="machineSearchForm" style="margin-bottom: 20px;">
+                            <input type="text" id="machineSearch" placeholder="Search Machine" required
+                                style="width: 50%;">
+                            <button type="submit">Search</button>
+                        </form>
+                        <canvas id="machineMonthChart"></canvas>
+                    </div>
+                    <div class="chart hidden" id="conclusion"
+                        style="height:fit-content; border-style:outset; margin-top:80px;">
+                        <h2 style=" font-size: x-large;">Conlusion</h2>
+                        <p style="margin-top: -20px">"Active Machine"</p>
+                        <article style="text-align: justify; padding:20px; margin-top:30px">
+                            <ul>
+                                <li style="font-size: large; margin-bottom: 20px">
+                                    1. In July there was the highest increase in sales of 346.5
+                                    compared to the previous month at GuttenPlans
+                                </li>
+                                <li style="font-size: large; margin-bottom: 20px">
+                                    2. GuttenPlans and EB Public Library are ahead in sales compared
+                                    to others and only have one active machine
+                                </li>
+                                <li style="font-size: large; margin-bottom: 20px">
+                                    3. BSQ Mall has 2 active machines but sales are still below
+                                    GuttenPlans and EB Public Library
+                                </li>
+                                <li style="font-size: large;">
+                                    4. Vending machines at the EB Public Library began active in
+                                    March
+                                </li>
+                            </ul>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- ===== Footer ===== -->
+        <div class="footer">
+            <footer>&copy;Team 1 - Section Medan</footer>
+        </div>
+    </section>
+
+    <!-- Theme Toggle Button -->
+    <button id="theme-toggle" class="theme-toggle">
+        <i class='bx bx-moon'></i>
+    </button>
+
+    <script>
+        function toggleConclusion() {
+            var conclusion = document.getElementById('conclusion');
+            conclusion.classList.toggle('hidden');
+        }
+    </script>
+
+    <!-- Link JS -->
+    <script src="assets/js/machine.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+</body>
+
+</html>

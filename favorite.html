@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard VM</title>
+
+    <!-- Box Icons  -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Styles  -->
+    <link rel="shortcut icon" href="assets/img/vending-machine3.png" type="image/x-icon" style="height: max-content;">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        #sortOrder {
+            height: 38px;
+            font-size: 13px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            display: block;
+            background-color: #fff;
+            color: #333;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .dark-mode #sortOrder {
+            background-color: #333;
+            color: #ffffff;
+        }
+
+        #sortOrder:hover,
+        #sortOrder:focus {
+            border-color: var(--color_Purple);
+            box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+        }
+
+        .sort-filter {
+            display: flex;
+            align-items: center;
+            margin-right: 30px;
+        }
+
+        .sort-filter label,
+        .sort-filter input,
+        .sort-filter button {
+            margin-left: 10px;
+        }
+
+        .toggle-button {
+            font-weight: 800;
+            position: absolute;
+            height: 35px;
+            padding: 5px;
+            right: 0;
+            margin-right: 50px;
+            background-color: #ff1ce8;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .toggle-button:hover {
+            background-color: #a82f9e;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sidebar close">
+        <!-- ========== Logo ============  -->
+        <a href="#" class="logo-box">
+            <i class='bx bxl-microsoft'></i>
+            <div class="logo-name">Menu</div>
+        </a>
+
+        <!-- ========== List ============  -->
+        <ul class="sidebar-list">
+            <!-- -------- Non Dropdown List Item ------- -->
+            <li id="menu-dashboard">
+                <div class="title">
+                    <a href="index.html" class="link">
+                        <i class='bx bx-grid-alt'></i>
+                        <span class="name">Dashboard</span>
+                    </a>
+                </div>
+                <div class="submenu">
+                    <a href="index.html" class="link submenu-title">Dashboard</a>
+                </div>
+            </li>
+
+            <!-- -------- Dropdown List Item ------- -->
+            <li id="menu-category" class="dropdown">
+                <div class="title">
+                    <a href="#" class="link">
+                        <i class='bx bx-line-chart'></i>
+                        <span class="name">Category</span>
+                    </a>
+                    <i class='bx bxs-chevron-down'></i>
+                </div>
+                <div class="submenu">
+                    <a href="#" class="link submenu-title">Category</a>
+                    <a href="product.html" id="subitem1" class="link">Product</a>
+                    <a href="location.html" id="subitem2" class="link">Location</a>
+                    <a href="machine.html" id="subitem3" class="link">Active Machine</a>
+                    <a href="favorite.html" id="subitem4" class="link">Favorite Product</a>
+                </div>
+            </li>
+
+            <!-- -------- Non Dropdown List Item ------- -->
+            <li id="menu-data">
+                <div class="title">
+                    <a href="data.html" class="link">
+                        <i class='bx bx-data'></i>
+                        <span class="name">Data</span>
+                    </a>
+                </div>
+                <div class="submenu">
+                    <a href="data.html" class="link submenu-title">Data</a>
+                </div>
+            </li>
+
+            <!-- -------- Non Dropdown List Item ------- -->
+            <li id="menu-recommendation">
+                <div class="title">
+                    <a href="recommendation.html" class="link">
+                        <i class='bx bx-bulb'></i>
+                        <span class="name">Recommendation</span>
+                    </a>
+                </div>
+                <div class="submenu">
+                    <a href="recommendation.html" class="link submenu-title">Recommendation</a>
+                </div>
+            </li>
+
+            <!-- -------- Non Dropdown List Item ------- -->
+            <li id="menu-team">
+                <div class="title">
+                    <a href="team.html" class="link">
+                        <i class='bx bx-user'></i>
+                        <span class="name">Team</span>
+                    </a>
+                </div>
+                <div class="submenu">
+                    <a href="team.html" class="link submenu-title">Team</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- ============= Home Section =============== -->
+    <section class="home">
+        <div class="toggle-sidebar">
+            <i class='bx bx-menu'></i>
+
+            <!-- =========== Header ============= -->
+            <header>
+                <div class="text">Capstone Project</div>
+            </header>
+        </div>
+        <!-- Garis horizontal -->
+        <hr class="content-divider">
+
+        <main>
+            <!-- Card Container -->
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="number" id="totalRevenue">0</div>
+                        <div class="card-name">Total Revenue</div>
+                    </div>
+                    <div class="icon-box">
+                        <i class="bx bx-dollar" style="font-size: 80px;"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <div class="number" id="totalQuantity">0</div>
+                        <div class="card-name">Quantity</div>
+                    </div>
+                    <div class="icon-box">
+                        <i class="bx bx-archive-in" style="font-size: 80px;"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <div id="totalProductsSold" class="number">0</div>
+                        <div class="card-name">Total Product</div>
+                    </div>
+                    <div class="icon-box">
+                        <i class="bx bx-shopping-bag" style="font-size: 80px;"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <div id="averageSales" class="number">0</div>
+                        <div class="card-name">AVG Sales</div>
+                    </div>
+                    <div class="icon-box">
+                        <i class="bx bx-chart" style="font-size: 80px;"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="chart-container">
+                <button class="toggle-button" onclick="toggleConclusion()">Conclusion</button>
+                <h1>Vending Machine</h1>
+                <p>"Sales Chart"</p>
+                <div class="filter-container">
+                    <select id="categoryFilter" style="margin-right:10px;">
+                        <option value="" selected disabled>Category Filter</option>
+                        <option value="all">All</option>
+                        <option value="Food">Food</option>
+                        <option value="Carbonated">Carbonated</option>
+                        <option value="Non Carbonated">Non Carbonated</option>
+                        <option value="water">Water</option>
+                    </select>
+                    <div class="sort-filter">
+                        <label for="sortOrder" style="margin-right: 10px;">Sort Order:</label>
+                        <select id="sortOrder">
+                            <option value="desc">Descending</option>
+                            <option value="asc">Ascending</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="charts">
+                    <div class="chart">
+                        <h2>Top 10 Favorite Product</h2>
+                        <canvas id="productBarChart"></canvas>
+                    </div>
+                    <div class="chart hidden" id="conclusion"
+                        style="height:fit-content; border-style:outset; margin-top:130px">
+                        <h2 style=" font-size: x-large;">Conlusion</h2>
+                        <p style="margin-top: -20px">"Favorite Product"</p>
+                        <article style="text-align: justify; padding:20px; margin-top:30px">
+                            <ul>
+                                <li style="font-size: large; margin-bottom: 20px; margin-right:10px">
+                                    Carbonated has the second fewest types of products and is also
+                                    the second best-selling product in that category, so it is in
+                                    the top 3 most popular products.
+                                </li>
+                            </ul>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- ===== Footer ===== -->
+        <div class="footer">
+            <footer>&copy;Team 1 - Section Medan</footer>
+        </div>
+    </section>
+
+    <!-- Theme Toggle Button -->
+    <button id="theme-toggle" class="theme-toggle">
+        <i class='bx bx-moon'></i>
+    </button>
+
+    <script>
+        function toggleConclusion() {
+            var conclusion = document.getElementById('conclusion');
+            conclusion.classList.toggle('hidden');
+        }
+    </script>
+
+    <!-- Link JS -->
+    <script src="assets/js/favorite.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+</body>
+
+</html>
