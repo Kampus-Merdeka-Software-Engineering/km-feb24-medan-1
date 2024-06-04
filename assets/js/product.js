@@ -218,7 +218,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById('totalProductsSold').textContent = totalProductsSold.toLocaleString();
     }
 
-    document.getElementById('applyDateFilter').addEventListener('click', () => {
+    document.getElementById('filterDateButton').addEventListener('click', () => {
         const startDate = document.getElementById('startDate').value;
         const endDate = document.getElementById('endDate').value;
         updateCharts('all', startDate, endDate);
