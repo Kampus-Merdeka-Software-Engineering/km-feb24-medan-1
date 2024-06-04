@@ -314,7 +314,7 @@
 }
 
 .dark-mode .chart {
-    background: #252525;
+    background: #252527;
 }
 
 .dark-mode .chart p {
@@ -341,7 +341,7 @@
 }
 
 .dark-mode #monthFilter {
-    background: #252525;
+    background: #252527;
 }
 
 .dark-mode .sidebar.close .sidebar-list li:hover .submenu {
