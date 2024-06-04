@@ -1,314 +1,236 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="dark">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team 1 - Section Medan</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css">
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
-    <script src="https://kit.fontawesome.com/ae360af17e.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/team.css">
+    <title>Dashboard VM</title>
+
+    <!-- Box Icons  -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Styles  -->
+    <link rel="shortcut icon" href="assets/img/vending-machine3.png" type="image/x-icon" style="height: max-content;">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .chart-container {
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        @media(max-width: 1240px) {
+            .team {
+                width: 100%;
+                height: auto;
+                padding: 90px 2%;
+            }
+
+            .center h1 {
+                font-size: 3.2rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <div class="wrapper">
-        <aside id="sidebar" class="js-sidebar">
-            <!-- Content For Sidebar -->
-            <div class="h-100">
-                <div class="sidebar-logo">
-                    <a href="#">Content</a>
+    <div class="sidebar close">
+        <!-- ========== Logo ============  -->
+        <a href="#" class="logo-box">
+            <i class='bx bxl-microsoft'></i>
+            <div class="logo-name">Menu</div>
+        </a>
+
+        <!-- ========== List ============  -->
+        <ul class="sidebar-list">
+            <!-- -------- Non Dropdown List Item ------- -->
+            <li id="menu-dashboard">
+                <div class="title">
+                    <a href="index.html" class="link">
+                        <i class='bx bx-grid-alt'></i>
+                        <span class="name">Dashboard</span>
+                    </a>
                 </div>
-                <ul class="sidebar-nav">
-                    <li class="sidebar-header">
-                        Menu
-                    </li>
-                    <li class="sidebar-item">
-                        <a href="index.html" class="sidebar-link">
-                            <i class="fa-solid fa-layer-group pe-2"></i>
-                            Dashboard
-                        </a>
-                    </li>
-                    <li class="sidebar-item">
-                        <a href="#" class="sidebar-link collapsed" data-bs-target="#pages" data-bs-toggle="collapse"
-                            aria-expanded="false"><i class="fa-solid fa-chart-simple pe-2"></i>
-                            Category
-                        </a>
-                        <ul id="pages" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-                            <li class="sidebar-item">
-                                <a href="product.html" class="sidebar-link">Product</a>
-                            </li>
-                            <li class="sidebar-item">
-                                <a href="location.html" class="sidebar-link">Location</a>
-                            </li>
-                            <li class="sidebar-item">
-                                <a href="activemachine.html" class="sidebar-link">Active Machine</a>
-                            </li>
-                            <li class="sidebar-item">
-                                <a href="favoriteproduct.html" class="sidebar-link">Favorite Product</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="sidebar-item">
-                        <a href="recommendation.html" class="sidebar-link collapsed" aria-expanded="false"><i
-                                class="fa-solid fa-lightbulb pe-2"></i>
-                            Recommendation
-                        </a>
-                    </li>
-                    <li class="sidebar-item">
-                        <a href="data.html" class="sidebar-link collapsed" aria-expanded="false"><i
-                                class="fa-solid fa-database pe-2  "></i>
-                            Data
-                        </a>
-                    </li>
-                    <li class="sidebar-item">
-                        <a href="team.html" class="sidebar-link collapsed" aria-expanded="false"><i
-                                class="fa-regular fa-user pe-2"></i>
-                            Team
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </aside>
-        <div class="main">
-            <nav class="navbar navbar-expand px-3 border-bottom">
-                <button class="btn" id="sidebar-toggle" type="button">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </nav>
-            <main class="content px-3 py-2">
-                <div class="container-fluid">
-                    <div class="mb-3" style="font-weight: 800; font-size:21px">
-                        <h4>Capstone Project</h4>
-                    </div>
+                <div class="submenu">
+                    <a href="index.html" class="link submenu-title">Dashboard</a>
                 </div>
-                <div class="card border-0">
-                    <div class="card-header" style="margin-top:5px">
-                        <h5 class="card-title" style="text-align: center; justify-content:center; font-weight:800">
-                            Our Great Team
-                        </h5>
-                    </div>
+            </li>
+
+            <!-- -------- Dropdown List Item ------- -->
+            <li id="menu-category" class="dropdown">
+                <div class="title">
+                    <a href="#" class="link">
+                        <i class='bx bx-line-chart'></i>
+                        <span class="name">Category</span>
+                    </a>
+                    <i class='bx bxs-chevron-down'></i>
                 </div>
-                <div class="card-container2">
-                    <div class="card2">
-                        <div class="circle">
-                            <div class="imgBox">
-                                <img src="image/amel.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="content2">
-                            <h3>Amalia Nurpalah</h3>
-                            <div class="textIcon2">
-                                <h4>Team Leader</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card2">
-                        <div class="circle">
-                            <div class="imgBox">
-                                <img src="image/elja.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="content2">
-                            <h3>Elja Gusfi Anwar</h3>
-                            <div class="textIcon2">
-                                <h4>Deployment Team</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card2">
-                        <div class="circle">
-                            <div class="imgBox">
-                                <img src="image/nada.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="content2">
-                            <h3>Nada Aghnia</h3>
-                            <div class="textIcon2">
-                                <h4>Deployment Team</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card2">
-                        <div class="circle">
-                            <div class="imgBox">
-                                <img src="image/meyke.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="content2">
-                            <h3>Meyke Nurul Intan</h3>
-                            <div class="textIcon2">
-                                <h4>Quality Assurance</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card2">
-                        <div class="circle">
-                            <div class="imgBox">
-                                <img src="image/nico.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="content2">
-                            <h3>Nico Yudical Firdaus</h3>
-                            <div class="textIcon2">
-                                <h4>Quality Assurance</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card2">
-                        <div class="circle">
-                            <div class="imgBox">
-                                <img src="image/buhori.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="content2">
-                            <h3>Buhori</h3>
-                            <div class="textIcon2">
-                                <h4>Quality Assurance</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card2">
-                        <div class="circle">
-                            <div class="imgBox">
-                                <img src="image/candra.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="content2">
-                            <h3>Candra Zacky Firmansyah</h3>
-                            <div class="textIcon2">
-                                <h4>Front-end Engineer</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card2">
-                        <div class="circle">
-                            <div class="imgBox">
-                                <img src="image/farid.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="content2">
-                            <h3>Farid Irsyad Gunawan</h3>
-                            <div class="textIcon2">
-                                <h4>Front-end Engineer</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card2">
-                        <div class="circle">
-                            <div class="imgBox">
-                                <img src="image/shafa.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="content2">
-                            <h3>Shafa Edfinanda Maghfira</h3>
-                            <div class="textIcon2">
-                                <h4>Front-end Engineer</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card2">
-                        <div class="circle">
-                            <div class="imgBox">
-                                <img src="image/robby.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="content2">
-                            <h3>Robby Alamsyah S. P.</h3>
-                            <div class="textIcon2">
-                                <h4>Front-end Engineer</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card2">
-                        <div class="circle">
-                            <div class="imgBox">
-                                <img src="image/alfiyan.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="content2">
-                            <h3>Alfiyan Syahrotus Sa'adah</h3>
-                            <div class="textIcon2">
-                                <h4>Pitch Deck Team</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card2">
-                        <div class="circle">
-                            <div class="imgBox">
-                                <img src="image/khansa.jpeg" alt="">
-                            </div>
-                        </div>
-                        <div class="content2">
-                            <h3>Khansa Farras Callista A.</h3>
-                            <div class="textIcon2">
-                                <h4>Pitch Deck Team</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card2">
-                        <div class="circle">
-                            <div class="imgBox">
-                                <img src="image/puput.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="content2">
-                            <h3>Putri Dwi Kurnia</h3>
-                            <div class="textIcon2">
-                                <h4>Pitch Deck Team</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card2">
-                        <div class="circle">
-                            <div class="imgBox">
-                                <img src="image/elja.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="content2">
-                            <h3>Rayditto Makalalag</h3>
-                            <div class="textIcon2">
-                                <h4>Section Manager</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card2">
-                        <div class="circle">
-                            <div class="imgBox">
-                                <img src="image/nada.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="content2">
-                            <h3>Rachmad Syaefullah</h3>
-                            <div class="textIcon2">
-                                <h4>Mentor</h4>
-                            </div>
-                        </div>
-                    </div>
+                <div class="submenu">
+                    <a href="#" class="link submenu-title">Category</a>
+                    <a href="product.html" id="subitem1" class="link">Product</a>
+                    <a href="location.html" id="subitem2" class="link">Location</a>
+                    <a href="machine.html" id="subitem3" class="link">Active Machine</a>
+                    <a href="favorite.html" id="subitem4" class="link">Favorite Product</a>
                 </div>
-            </main>
-            <a href="#" class="theme-toggle">
-                <i class="fa-regular fa-moon"></i>
-                <i class="fa-regular fa-sun"></i>
-            </a>
-            <footer class="footer">
-                <div class="container-fluid">
-                    <div class="row text-muted">
-                        <div class="col-6 text-start">
-                            <p class="mb-0">
-                                <a href="#" class="text-muted">
-                                    <strong>&copy;Team 1 - Section Medan</strong>
-                                </a>
-                            </p>
-                        </div>
-                    </div>
+            </li>
+
+            <!-- -------- Non Dropdown List Item ------- -->
+            <li id="menu-data">
+                <div class="title">
+                    <a href="data.html" class="link">
+                        <i class='bx bx-data'></i>
+                        <span class="name">Data</span>
+                    </a>
                 </div>
-            </footer>
-        </div>
+                <div class="submenu">
+                    <a href="data.html" class="link submenu-title">Data</a>
+                </div>
+            </li>
+
+            <!-- -------- Non Dropdown List Item ------- -->
+            <li id="menu-recommendation">
+                <div class="title">
+                    <a href="recommendation.html" class="link">
+                        <i class='bx bx-bulb'></i>
+                        <span class="name">Recommendation</span>
+                    </a>
+                </div>
+                <div class="submenu">
+                    <a href="recommendation.html" class="link submenu-title">Recommendation</a>
+                </div>
+            </li>
+
+            <!-- -------- Non Dropdown List Item ------- -->
+            <li id="menu-team">
+                <div class="title">
+                    <a href="team.html" class="link">
+                        <i class='bx bx-user'></i>
+                        <span class="name">Team</span>
+                    </a>
+                </div>
+                <div class="submenu">
+                    <a href="team.html" class="link submenu-title">Team</a>
+                </div>
+            </li>
+        </ul>
     </div>
+
+    <!-- ============= Home Section =============== -->
+    <section class="home">
+        <div class="toggle-sidebar">
+            <i class='bx bx-menu'></i>
+
+            <!-- =========== Header ============= -->
+            <header>
+                <div class="text">Capstone Project</div>
+            </header>
+        </div>
+        <!-- Garis horizontal -->
+        <hr class="content-divider">
+
+        <main>
+            <!-- Card Container -->
+            <div class="card-container">
+            </div>
+            <div class="chart-container">
+                <h1 style="font-size: 36px;">Our Great Team</h1>
+                <div class="container">
+                    <section class="team">
+                        <div class="team-content">
+                            <div class="box">
+                                <img src="/assets/img/Amalia.png">
+                                <h3>Amalia Nur Palah</h3>
+                                <h5>Team Leader</h5>
+                            </div>
+
+                            <div class="box">
+                                <img src="/assets/img/Candra.png">
+                                <h3>Candra Zaky Firmansyah</h3>
+                                <h5>Front-end Engineer</h5>
+                            </div>
+
+                            <div class="box">
+                                <img src="/assets/img/Farid.png">
+                                <h3>Farid Irsyad Gunawan</h3>
+                                <h5>Front-end Gunawan</h5>
+                            </div>
+
+                            <div class="box">
+                                <img src="/assets/img/Robby.png">
+                                <h3>Robby Alamsyah Satriya Putra</h3>
+                                <h5>Front-end Engineer</h5>
+                            </div>
+
+                            <div class="box">
+                                <img src="/assets/img/Shafa.png">
+                                <h3>Shafa Edfinanda Maghfira</h3>
+                                <h5>Front-end Engineer</h5>
+                            </div>
+
+                            <div class="box">
+                                <img src="/assets/img/Elja.png">
+                                <h3>Elja Gusfi Anwar</h3>
+                                <h5>Deployment Team</h5>
+                            </div>
+
+                            <div class="box">
+                                <img src="/assets/img/Nada.png">
+                                <h3>Nada Nur Aghnia</h3>
+                                <h5>Deployment Team</h5>
+                            </div>
+
+                            <div class="box">
+                                <img src="/assets/img/Alfiyan.png">
+                                <h3>Alfiyan Syahrotus Sa'adah</h3>
+                                <h5>Pitch Deck Team</h5>
+                            </div>
+
+                            <div class="box">
+                                <img src="/assets/img/Khansa.png">
+                                <h3>Khansa Farras Callista A.</h3>
+                                <h5>Pitch Deck Team</h5>
+                            </div>
+
+                            <div class="box">
+                                <img src="/assets/img/Putri.png">
+                                <h3>Putri Dwi Kurnia</h3>
+                                <h5>Pitch Deck Team</h5>
+                            </div>
+
+                            <div class="box">
+                                <img src="/assets/img/Buhori.png">
+                                <h3>Buhori</h3>
+                                <h5>Quality Assurance</h5>
+                            </div>
+
+                            <div class="box">
+                                <img src="/assets/img/Meyke.png">
+                                <h3>Meyke Nurul Intan</h3>
+                                <h5>Quality Assurance</h5>
+                            </div>
+
+                            <div class="box" style="margin-bottom: 40px;">
+                                <img src="/assets/img/Nico.png">
+                                <h3>Nico Yudical Firdaus</h3>
+                                <h5>Quality Assurance</h5>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+
+        <!-- ===== Footer ===== -->
+        <div class="footer">
+            <footer>&copy;Team 1 - Section Medan</footer>
+        </div>
+    </section>
+
+    <!-- Theme Toggle Button -->
+    <button id="theme-toggle" class="theme-toggle">
+        <i class='bx bx-moon'></i>
+    </button>
+
+    <!-- Link JS -->
+    <script src="assets/js/team.js"></script>
 </body>
-<script src="js/script.js"></script>
 
 </html>
