@@ -35,10 +35,14 @@
         .hidden {
             display: none;
         }
+
+        .chart {
+            margin-left: 160px;
+        }
     </style>
 </head>
 
-<body>
+<body class="location">
     <div class="sidebar close">
         <!-- ========== Logo ============  -->
         <a href="#" class="logo-box">
@@ -186,12 +190,12 @@
                     <option value="water">Water</option>
                 </select>
                 <div class="charts">
-                    <div class="chart" style="width:50%; margin-left:240px;">
+                    <div class="chart" style="width:50%;">
                         <h2>Based On Product Category</h2>
                         <canvas id="locationPieChart"></canvas>
                     </div>
                     <div class="chart hidden" id="conclusion"
-                        style="height:fit-content; border-style:outset; margin-top:90px;">
+                        style="height:fit-content; width: 20px; border-style:outset; margin-top:90px;">
                         <h2 style=" font-size: x-large;">Conlusion</h2>
                         <p style="margin-top: -20px">"Based on Location"</p>
                         <article style="text-align: justify; padding:20px; margin-top:30px">
