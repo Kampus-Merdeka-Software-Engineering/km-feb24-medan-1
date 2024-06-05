@@ -648,6 +648,13 @@
     }
 }
 
+@media (max-width: 820px) {
+    .theme-toggle {
+        margin-right: 4px;
+        margin-top: -6px;
+    }
+}
+
 @media (max-width: 774px) {
     .theme-toggle {
         margin-top: -2px;
