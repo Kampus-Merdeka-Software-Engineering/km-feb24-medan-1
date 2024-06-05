@@ -642,25 +642,20 @@
 }
 
 @media (max-width: 1080px) {
-    .card {
-        margin-left: 10px;
-        max-width: calc(50% - 0px);
-        /* 50% lebar dengan gap */
+    .theme-toggle {
+        margin-right: 5px;
+        margin-top: -10px;
     }
 }
 
 @media (max-width: 774px) {
-    .card {
-        margin-right: 20px;
-        max-width: calc(100% - 30px);
-        /* 100% lebar dengan gap */
+    .theme-toggle {
+        margin-top: -2px;
     }
 }
 
-@media (max-width: 560px) {
-    .card {
-        margin-left: 25px;
-        max-width: 100%;
-        /* Full width tanpa gap */
+@media (max-width: 576px) {
+    .theme-toggle {
+        margin-right: 2000px;
     }
 }
