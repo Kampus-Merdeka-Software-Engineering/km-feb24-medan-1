@@ -734,7 +734,7 @@
     }
 
     .theme-toggle {
-        margin-top: -10px;
+        display: flex;
     }
 }
 
@@ -752,8 +752,7 @@
     }
 
     .theme-toggle {
-        margin-right: 80px;
-        margin-top: -10px;
+        display: flex;
     }
 
     .date-filter {
@@ -765,8 +764,7 @@
     }
 
     .theme-toggle {
-        margin-right: 4px;
-        margin-top: -6px;
+        display: flex;
     }
 
     .filter-container {
@@ -801,12 +799,12 @@
     }
 
     .theme-toggle {
-        margin-right: 80px;
-        margin-top: -10px;
+        display: flex;
     }
 
     .date-filter {
-        margin-right: 200px;
+        margin-top: 20px;
+        margin-right: auto;
     }
 
     .card-container {
@@ -819,7 +817,7 @@
     }
 
     .filter-container {
-        display: flex;
+        display: inline;
         margin-left: -40px;
     }
 
@@ -841,15 +839,13 @@
     }
 }
 
-/* ini belum fix */
 
 @media (max-width: 576px) {
     .theme-toggle {
-        margin-right: 180px;
+        display: flex;
     }
 
     .card {
-        margin-left: 25px;
         max-width: 100%;
     }
 
@@ -857,16 +853,16 @@
         grid-auto-flow: row;
     }
 
-    .chart canvas {
-        max-width: 300px;
-        width: 100%;
-        height: auto;
-    }
-
     .chart {
         margin-right: 200px;
         max-width: 300px;
         width: 100%;
+    }
+
+    .chart canvas {
+        max-width: 300px;
+        width: 100%;
+        height: auto;
     }
 
     .chart h2 {
@@ -878,12 +874,61 @@
         width: 100%;
         height: auto;
     }
+
+    .filter-container {
+        display: inline;
+        margin-left: -40px;
+    }
+
+    .toggle-button {
+        display: block;
+        margin-top: 70px;
+    }
 }
 
 @media (max-width: 430px) {
     .theme-toggle {
-        margin-right: 285px;
-        margin-top: -17px;
+        display: flex;
+    }
+
+    .card {
+        height: 120px;
+    }
+
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+
+    .filter-container {
+        display: inline;
+        margin-left: -40px;
+    }
+
+    .date-filter {
+        margin-right: 0;
+    }
+
+    .toggle-button {
+        display: block;
+        margin-top: 70px;
+    }
+
+    .location .theme-toggle {
+        margin-right: 0;
+    }
+
+    .location .charts {
+        margin-left: 0;
+    }
+
+    .location .chart {
+        width: 100%;
+    }
+
+    .chart {
+        margin-right: 0;
+        max-width: 200px;
+        width: 100%;
     }
 
     .chart canvas {
@@ -892,7 +937,9 @@
         height: auto;
     }
 
-    .card {
-        height: 120px;
+    .charts {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
     }
 }
