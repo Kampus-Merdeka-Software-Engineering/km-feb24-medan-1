@@ -270,11 +270,29 @@
 }
 
 .chart {
+    margin-bottom: 80px;
+    height: 525px;
     min-width: 500px;
     max-width: calc(110% - 20px);
     border-radius: 10px;
     padding: 20px;
     width: 100%;
+}
+
+.chart #averagePriceChart {
+    height: 550px !important;
+}
+
+.activeMachine .chart {
+    height: 100%;
+}
+
+.favoriteProduct .chart {
+    height: 100%;
+}
+
+.product #categoryLocationChart {
+    height: 470px !important;
 }
 
 .chart h2 {
@@ -284,6 +302,10 @@
     display: flex;
     text-align: center;
     justify-content: center;
+}
+
+.team .chart-container {
+    margin-top: 40px;
 }
 
 /* Light and Dark Mode Classes */
@@ -394,12 +416,12 @@
 }
 
 .theme-toggle {
-    position: fixed;
+    position: absolute;
     right: 10px;
     top: 3%;
     transform: translateY(-50%);
     background: var(--color_Light1);
-    border: none;
+    border-style: double;
     cursor: pointer;
     font-size: 24px;
     z-index: 1000;
@@ -714,14 +736,271 @@
     font-weight: 500;
 }
 
+/* ============ style recommendation ============ */
+.dark-mode .rec-container {
+    color: #ffffff;
+}
+
+.dark-mode .rec-header {
+    background-color: var(--color_Dark2);
+}
+
+.dark-mode .rec-card-content {
+    background-color: var(--color_Dark2);
+}
+
+.rec-container {
+    margin-left: 25px;
+    margin-right: 25px;
+    padding: 20px;
+}
+
+.rec-header {
+    border-radius: 20px;
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.rec-card-content {
+    display: grid;
+    grid-auto-flow: column;
+    border-radius: 20px;
+    background-color: #f8f9fa;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.rec-card-fill {
+    max-width: calc(100% - 30%);
+    margin-left: 5px;
+}
+
+.rec-card-fill2 {
+    margin-left: 5px;
+}
+
+.rec-card h3 {
+    color: #e23ff1;
+    font-size: 25px;
+}
+
+.rec-card-revenue {
+    text-align: justify;
+}
+
+.rec-card .rec-card-revenue .badge {
+    background-color: #4CAF50;
+    border-radius: 5px;
+    color: #fff;
+    padding: 5px;
+}
+
+.rec-card p {
+    margin-top: 5px;
+}
+
+.product .date-filter label,
+.date-filter input,
+.date-filter button {
+    margin-left: 10px;
+}
+
+.product .date-filter {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.product .filter-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.favoriteProduct #conclusion {
+    margin-top: 120px;
+}
+
+.product h2 {
+    font-size: x-large;
+}
+
+.product .chart p {
+    font-size: medium;
+    margin-top: -20px;
+}
+
+.product .chart article ul li {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.product .chart article {
+    text-align: justify;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.location #doughnut-chart {
+    width: 50%;
+}
+
+.location h2 {
+    font-size: x-large;
+}
+
+.location .chart p {
+    font-size: medium;
+    margin-top: -20px;
+}
+
+.location .chart article ul li {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.location .chart article {
+    text-align: justify;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.location #conclusion {
+    position: relative;
+    margin-top: 90px;
+    height: 370px;
+    margin-left: -80px;
+}
+
+.location .toggle-button {
+    font-weight: 800;
+    position: absolute;
+    height: 35px;
+    padding: 5px;
+    right: 0;
+    margin-right: 50px;
+    background-color: #ff1ce8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.location .toggle-button:hover {
+    background-color: #a82f9e;
+}
+
+.favoriteProduct .chart {
+    height: 520px;
+}
+
+.favoriteProduct .chart h2 {
+    font-size: x-large;
+}
+
+.favoriteProduct .chart p {
+    margin-top: -20px;
+}
+
+.favoriteProduct .chart article {
+    text-align: justify;
+    padding: 20px;
+    margin-top: 30px
+}
+
+.favoriteProduct .chart article ul li {
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-right: 10px
+}
+
+.activeMachine .chart {
+    height: 515px;
+}
+
+.activeMachine .chart #conclusion {
+    margin-top: 80px;
+}
+
+.activeMachine #conclusion h2 {
+    font-size: x-large;
+}
+
+.activeMachine .chart article {
+    text-align: justify;
+    padding: 20px;
+    margin-top: 30px
+}
+
+.activeMachine .chart article ul li {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
 /* Media Queries */
 @media (max-width: 1200px) {
+
     .charts {
         grid-template-columns: 1fr;
     }
 
     .chart {
         width: 100%;
+        height: 720px;
+    }
+
+    .product .chart {
+        height: 460px;
+        margin-bottom: 40px;
+    }
+
+    .location .chart-container {
+        height: 100%;
+    }
+
+    #productChart {
+        height: 500px;
+    }
+
+    .chart #machineChart {
+        height: 100px;
+    }
+
+    .main #activeMachine {
+        margin-top: -100px;
+    }
+
+    .location #doughnut-chart {
+        margin-left: 160px;
+        margin-top: 6px;
+        height: 400px;
+    }
+
+    .location #conclusion {
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+
+    .activeMachine #conclusion {
+        margin-top: 100px;
+    }
+
+    .activeMachine .chart-container {
+        height: 100%
+    }
+
+    .favoriteProduct #favoriteProduct {
+        height: 400px;
+    }
+
+    .favoriteProduct #conclusion {
+        margin-top: 0px !important;
     }
 
     .card .icon-box i {
@@ -734,17 +1013,84 @@
     }
 
     .theme-toggle {
-        display: flex;
+        margin-top: -10px;
+    }
+
+    #doughnut-chart {
+        margin-left: 40px;
+        width: 700px;
+        margin-bottom: 120px;
+        margin-top: 20px;
+    }
+
+    #topProduct {
+        height: 500px;
+    }
+
+    .favoriteProduct .chart {
+        height: 100%;
+    }
+
+    .favoriteProduct #conclusion {
+        margin-top: -100px;
     }
 }
 
 @media (max-width: 820px) {
     .chart {
         padding: 15px;
+        width: 620px;
+        margin-left: -30px;
+    }
+
+    .product .chart {
+        height: 420px;
+        margin-left: -20px;
     }
 
     .center h1 {
         font-size: 3rem;
+    }
+
+    #doughnut-chart {
+        width: 120px;
+        margin-top: 10px
+    }
+
+    #averagePrice {
+        margin-top: 200px;
+    }
+
+    #activeMachine {
+        height: 500px;
+    }
+
+    .location #doughnut-chart {
+        margin-left: 180px;
+        margin-top: 10px;
+    }
+
+    .location #conclusion {
+        margin-left: 170px;
+    }
+
+    .activeMachine .chart {
+        margin-left: 0px;
+        width: 100%;
+    }
+
+    .activeMachine #conclusion {
+        margin-top: 50px;
+    }
+
+    .favoriteProduct #conclusion {
+        margin-top: 10px;
+        margin-left: -13px;
+    }
+
+    #topProduct {
+        margin-top: -250px;
+        margin-bottom: -140px;
     }
 
     .content-divider {
@@ -752,7 +1098,8 @@
     }
 
     .theme-toggle {
-        display: flex;
+        margin-right: 80px;
+        margin-top: -10px;
     }
 
     .date-filter {
@@ -764,7 +1111,8 @@
     }
 
     .theme-toggle {
-        display: flex;
+        margin-right: 4px;
+        margin-top: -6px;
     }
 
     .filter-container {
@@ -799,12 +1147,12 @@
     }
 
     .theme-toggle {
-        display: flex;
+        margin-right: 80px;
+        margin-top: -10px;
     }
 
     .date-filter {
-        margin-top: 20px;
-        margin-right: auto;
+        margin-right: 200px;
     }
 
     .card-container {
@@ -816,9 +1164,26 @@
         margin-top: -2px;
     }
 
+    #topProduct {
+        height: 450px !important;
+    }
+
+    #activeMachine {
+        height: 500px;
+    }
+
     .filter-container {
-        display: inline;
+        display: flex;
         margin-left: -40px;
+    }
+
+    .product #productChart {
+        margin-left: -40px;
+    }
+
+    .product #conclusion {
+        height: 90%;
+        width: 100%;
     }
 
     .location .theme-toggle {
@@ -833,113 +1198,600 @@
         width: 10px;
     }
 
+    .location #doughnut-chart {
+        margin-top: 0px;
+        margin-left: 150px;
+    }
+
+    .location #conclusion {
+        margin-left: 150px;
+    }
+
+    .favoriteProduct #conclusion {
+        width: 450px;
+        margin-left: 25px;
+    }
+
     .table .theme-toggle {
         margin-right: 210px;
         margin-top: -10px;
     }
-}
 
-
-@media (max-width: 576px) {
-    .theme-toggle {
-        display: flex;
-    }
-
-    .card {
-        max-width: 100%;
-    }
-
-    .rec-card-content {
-        grid-auto-flow: row;
-    }
-
-    .chart {
-        margin-right: 200px;
-        max-width: 300px;
-        width: 100%;
-    }
-
-    .chart canvas {
-        max-width: 300px;
-        width: 100%;
-        height: auto;
-    }
-
-    .chart h2 {
-        margin-right: 170px;
-    }
-
-    .charts {
-        max-width: 100px;
-        width: 100%;
-        height: auto;
-    }
-
-    .filter-container {
-        display: inline;
-        margin-left: -40px;
-    }
-
-    .toggle-button {
-        display: block;
-        margin-top: 70px;
+    #topProduct {
+        height: 100px;
     }
 }
 
 @media (max-width: 430px) {
-    .theme-toggle {
-        display: flex;
+    .sidebar {
+        display: none;
+    }
+
+    .sidebar.close {
+        display: block;
+    }
+
+    .home {
+        left: 0;
+        width: 100%;
+    }
+
+    .toggle-sidebar {
+        position: relative;
+        top: 0px;
+        left: 5px;
+    }
+
+    .content-divider {
+        width: 100%;
+    }
+
+    header .text {
+        font-size: small;
     }
 
     .card {
-        height: 120px;
+        margin-right: 15px;
+        height: 80px;
+        width: 375px;
+        margin-left: 10px;
     }
 
-    .card-container {
-        grid-template-columns: 1fr;
+    .team-content {
+        margin-left: -6px;
     }
 
     .filter-container {
-        display: inline;
-        margin-left: -40px;
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #categoryFilter {
+        width: 115px;
+        height: 32px;
+        font-size: 12px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-left: 40px;
+        margin-top: -3px;
+        display: block;
+        background-color: #fff;
+        color: #333;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: border-color 0.3s, box-shadow 0.3s;
+    }
+
+    #categoryFilter:hover,
+    #categoryFilter:focus {
+        border-color: var(--color_Purple);
+        box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
     }
 
     .date-filter {
-        margin-right: 0;
-    }
-
-    .toggle-button {
-        display: block;
-        margin-top: 70px;
-    }
-
-    .location .theme-toggle {
-        margin-right: 0;
-    }
-
-    .location .charts {
-        margin-left: 0;
-    }
-
-    .location .chart {
+        margin-top: 120px;
+        position: absolute;
+        margin-bottom: 10px;
         width: 100%;
+    }
+
+    .date-filter label {
+        font-size: 10px;
+    }
+
+    .date-filter {
+        margin-left: 60px;
+    }
+
+    #startDate {
+        width: 46px;
+        margin-top: 0px;
+        height: 30px;
+    }
+
+    #endDate {
+        width: 46px;
+        margin-top: 0px;
+        height: 30px;
+    }
+
+    #filterDateButton {
+        margin-top: -3px;
+        margin-left: 10px;
+        height: 32px;
+        display: block;
+        padding: 2px;
+    }
+
+    .card .card-name {
+        font-size: 18px;
+    }
+
+    .card .number {
+        font-size: 18px;
+        margin-bottom: -10px;
+    }
+
+    .card .icon-box i {
+        font-size: 42px;
+    }
+
+    .chart-container h1 {
+        font-size: 16px;
+    }
+
+    .chart-container p {
+        font-size: 12px;
+    }
+
+    .chart-container {
+        width: 380px;
+    }
+
+    .rec-card-fill {
+        font-size: 14px;
+    }
+
+    .revenue-details {
+        margin-top: 15px;
+        font-size: 14px;
+        margin-left: 15px;
+    }
+
+    .revenue-details h3 {
+        font-size: 18px;
+    }
+
+
+    .rec-card-fill h3 {
+        font-size: 18px;
+    }
+
+    .rec-card-fill2 {
+        font-size: 14px;
+    }
+
+    .rec-card-fill2 h3 {
+        font-size: 18px;
+    }
+
+    .main .chart-container {
+        height: 2510px;
+    }
+
+    .main .chart canvas {
+        width: 100%;
+        height: 320px !important;
+    }
+
+    body.main.dark-mode #doughnut-chart {
+        background-color: transparent;
+    }
+
+    body.main.dark-mode #averagePrice {
+        background-color: transparent;
+    }
+
+    body.main.dark-mode #activeMachine {
+        background-color: transparent;
+    }
+
+    .main {
+        width: 430px;
+        overflow-x: hidden !important;
+    }
+
+    .main .chart-container {
+        height: 2560px;
+    }
+
+    .main #productChart h2 {
+        width: 230px;
+        font-size: 16px;
+        margin-top: 70px;
+        margin-left: 50px;
+    }
+
+    .main #productChart {
+        margin-left: -10px;
+    }
+
+    .main #doughnut-chart h2 {
+        width: 200px;
+        font-size: 16px;
+        margin-left: 45px;
+        margin-top: -40px;
+    }
+
+    .main #doughnut-chart {
+        margin-left: 10px;
+    }
+
+    .main #topProduct h2 {
+        width: 200px;
+        font-size: 16px;
+        margin-top: -220px !important;
+        margin-left: 60px;
+    }
+
+    .main #topProduct {
+        width: 100%;
+        height: 400px;
+    }
+
+    .main #averagePrice h2 {
+        width: 200px;
+        font-size: 16px;
+        margin-top: -330px;
+        margin-left: 60px;
+    }
+
+    .main #averagePrice {
+        height: 170px;
+        width: 10px;
+        margin-left: -15px;
+    }
+
+    .main #activeMachine h2 {
+        font-size: 16px;
+        width: 240px;
+        margin-top: 190px;
+        margin-left: 50px;
+    }
+
+    .main #monthFilter {
+        width: 20px;
+        height: 20px;
+    }
+
+    .main #activeMachine input {
+        width: 45px !important;
+        margin-left: 10px;
+    }
+
+    #activeMachine label {
+        font-size: 12px;
+    }
+
+    #machineSearch {
+        margin-left: -63px;
+        height: 18px;
+        font-size: 12px;
+    }
+
+    #activeMachine {
+        height: 500px;
+        margin-top: 500px;
+        margin-left: -15px;
+    }
+
+    .chart h2 {
+        font-size: 10px;
     }
 
     .chart {
-        margin-right: 0;
-        max-width: 200px;
         width: 100%;
-    }
-
-    .chart canvas {
-        max-width: 200px;
-        width: 100%;
-        height: auto;
-    }
-
-    .charts {
+        min-width: 300px;
         max-width: 100%;
+        margin: 0 auto;
+        padding: 1px;
+    }
+
+    .product #productChart {
+        margin-left: 0px;
+    }
+
+    .product #categoryLocationChart {
+        margin-left: 0px;
+        max-height: 300px !important;
+    }
+
+    .product .chart {
+        margin-top: 45px;
+        height: 320px !important;
+        margin-left: 20px;
+    }
+
+    .product .chart h2 {
+        margin-bottom: 10px;
         width: 100%;
-        height: auto;
+        font-size: 14px;
+    }
+
+    .product .filter-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .product .date-filter {
+        margin-top: 120px;
+        position: absolute;
+        margin-bottom: 10px;
+    }
+
+    .product .date-filter label {
+        font-size: 10px;
+    }
+
+    .product .date-filter {
+        margin-left: 60px;
+    }
+
+    .product .toggle-button {
+        margin-right: 280px;
+        margin-top: 520px;
+        height: 25px;
+        width: 85px;
+        font-size: small;
+        display: block;
+        padding: 2px;
+    }
+
+    .product #conclusion {
+        margin-left: -5px;
+        margin-top: 30px;
+        height: 100%;
+        width: 100%;
+    }
+
+    .product .chart h2 {
+        font-size: 16px;
+    }
+
+    .product .chart p {
+        font-size: 12px;
+        margin-top: -10px;
+        margin-bottom: -30px;
+    }
+
+    .product .chart article ul li {
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+
+    .product .chart article {
+        text-align: justify;
+        padding: 20px;
+    }
+
+    body.location.dark-mode #doughnut-chart {
+        background-color: transparent;
+    }
+
+    .location #doughnut-chart {
+        width: 550px;
+        margin-left: -60px !important;
+        height: 300px;
+    }
+
+    .location #locationPieChart {
+        margin-top: 10px;
+        margin-left: 180px;
+    }
+
+    .location .chart {
+        width: 100px;
+        margin-left: 10px !important;
+    }
+
+    .location .toggle-button {
+        margin-right: 280px;
+        margin-top: 515px;
+        height: 25px;
+        width: 85px;
+        font-size: small;
+        display: block;
+        padding: 2px;
+    }
+
+    .location .chart h2 {
+        margin-top: 10px !important;
+        font-size: 14px;
+        margin-left: 230px !important;
+        width: 200px;
+    }
+
+    .location .chart #title {
+        margin-top: 10px !important;
+        margin-left: 50px !important;
+    }
+
+    .location #conclusion {
+        margin-top: 20px !important;
+        margin-left: 120px !important;
+        height: 230px;
+    }
+
+    .location .chart p {
+        font-size: 12px;
+        margin-bottom: -30px;
+    }
+
+    .location .chart article ul li {
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+
+    .location .chart article {
+        text-align: justify;
+        padding: 20px;
+    }
+
+    .location #categoryFilter {
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+
+    .favoriteProduct .toggle-button {
+        margin-right: 280px;
+        margin-top: 520px;
+        height: 25px;
+        width: 85px;
+        font-size: small;
+        display: block;
+        padding: 2px;
+    }
+
+    .favoriteProduct .chart-container {
+        height: 100%;
+    }
+
+    .favoriteProduct #conclusion {
+        margin-left: 0px;
+        margin-top: 20px !important;
+        max-width: 180px !important;
+    }
+
+    .favoriteProduct .sort-filter {
+        width: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 280px !important;
+        height: 10px;
+    }
+
+    .favoriteProduct .sort-filter label {
+        font-size: 12px;
+        width: 100px;
+    }
+
+    .favoriteProduct #categoryFilter {
+        margin-left: 60px;
+    }
+
+    .favoriteProduct .chart h2 {
+        margin-top: 10px;
+        font-size: 16px;
+        width: 300px;
+    }
+
+    .favoriteProduct .chart p {
+        font-size: 12px;
+        margin-bottom: -30px;
+    }
+
+    .favoriteProduct .chart article ul li {
+        font-size: 16px;
+        margin-top: 0px;
+    }
+
+    .favoriteProduct .chart article {
+        text-align: justify;
+        padding: 20px;
+    }
+
+    .favoriteProduct #favoriteProduct {
+        height: 350px !important;
+        margin-top: 10px;
+        margin-bottom: 40px;
+    }
+
+    .favoriteProduct #conclusion {
+        margin-top: 65px;
+    }
+
+    .activeMachine .charts {
+        height: 100%;
+    }
+
+    body.activeMachine.dark-mode .chart {
+        background-color: transparent;
+    }
+
+    .activeMachine .chart {
+        height: 430px !important;
+    }
+
+    .activeMachine .toggle-button {
+        margin-right: 280px;
+        margin-top: 490px;
+        height: 25px;
+        width: 85px;
+        font-size: small;
+        display: block;
+        padding: 2px;
+    }
+
+    .activeMachine .chart h2 {
+        margin-left: 10px;
+        margin-top: -10px;
+        font-size: 16px;
+        width: 300px;
+    }
+
+    .activeMachine #machineSearchForm button {
+        height: 18px;
+        font-size: 6px;
+    }
+
+    .activeMachine #machineSearchForm input {
+        height: 16px;
+        font-size: 8px;
+    }
+
+    .activeMachine #machineSearchForm {
+        margin-top: -5px;
+        height: 16px;
+        font-size: 8px;
+        margin-left: 70px;
+    }
+
+    .activeMachine #machineChart {
+        margin-left: -15px;
+    }
+
+    .activeMachine #machineMonthChart {
+        height: 320px !important;
+    }
+
+    .activeMachine #conclusion {
+        margin-top: 20px;
+        height: 330px !important;
+    }
+
+    .activeMachine .chart #title {
+        font-size: 16px;
+        margin-top: 10px;
+        margin-left: 1px;
+    }
+
+    .activeMachine .chart p {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+
+    .activeMachine .chart article ul li {
+        margin-top: -30px;
+        font-size: 12px;
+        margin-bottom: 40px;
+    }
+
+    .activeMachine .chart article {
+        text-align: justify;
+        padding: 20px;
     }
 }
