@@ -73,7 +73,7 @@
     </style>
 </head>
 
-<body>
+<body class="favoriteProduct">
     <div class="sidebar close">
         <!-- ========== Logo ============  -->
         <a href="#" class="logo-box">
@@ -177,7 +177,7 @@
                         <div class="card-name">Total Revenue</div>
                     </div>
                     <div class="icon-box">
-                        <i class="bx bx-dollar" style="font-size: 80px;"></i>
+                        <i class="bx bx-dollar"></i>
                     </div>
                 </div>
                 <div class="card">
@@ -186,7 +186,7 @@
                         <div class="card-name">Quantity</div>
                     </div>
                     <div class="icon-box">
-                        <i class="bx bx-archive-in" style="font-size: 80px;"></i>
+                        <i class="bx bx-archive-in"></i>
                     </div>
                 </div>
                 <div class="card">
@@ -195,7 +195,7 @@
                         <div class="card-name">Total Product</div>
                     </div>
                     <div class="icon-box">
-                        <i class="bx bx-shopping-bag" style="font-size: 80px;"></i>
+                        <i class="bx bx-shopping-bag"></i>
                     </div>
                 </div>
                 <div class="card">
@@ -204,7 +204,7 @@
                         <div class="card-name">AVG Sales</div>
                     </div>
                     <div class="icon-box">
-                        <i class="bx bx-chart" style="font-size: 80px;"></i>
+                        <i class="bx bx-chart"></i>
                     </div>
                 </div>
             </div>
@@ -230,17 +230,16 @@
                     </div>
                 </div>
                 <div class="charts">
-                    <div class="chart">
+                    <div class="chart" id="favoriteProduct">
                         <h2>Top 10 Favorite Product</h2>
                         <canvas id="productBarChart"></canvas>
                     </div>
-                    <div class="chart hidden" id="conclusion"
-                        style="height:fit-content; border-style:outset; margin-top:130px">
-                        <h2 style=" font-size: x-large;">Conlusion</h2>
-                        <p style="margin-top: -20px">"Favorite Product"</p>
-                        <article style="text-align: justify; padding:20px; margin-top:30px">
+                    <div class="chart hidden" id="conclusion" style="height:fit-content; border-style:outset;">
+                        <h2>Conlusion</h2>
+                        <p>"Favorite Product"</p>
+                        <article>
                             <ul>
-                                <li style="font-size: large; margin-bottom: 20px; margin-right:10px">
+                                <li>
                                     Carbonated has the second fewest types of products and is also
                                     the second best-selling product in that category, so it is in
                                     the top 3 most popular products.
