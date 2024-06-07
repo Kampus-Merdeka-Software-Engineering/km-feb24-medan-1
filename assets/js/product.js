@@ -306,6 +306,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     datasets: datasetCategoryLocation
                 },
                 options: {
+                    maintainAspectRatio: false,
                     responsive: true,
                     animation: {
                         duration: 800,
@@ -313,17 +314,63 @@ document.addEventListener("DOMContentLoaded", () => {
                     },
                     scales: {
                         x: {
+                            ticks: {
+                                font: function (context) {
+                                    let width = context.chart.width;
+                                    if (width <= 430) {
+                                        return {
+                                            size: 6,
+                                        };
+                                    } else {
+                                        return {
+                                            size: 14,
+                                        }
+                                    }
+                                }
+                            },
                             title: {
                                 display: true,
                             }
                         },
                         y: {
+                            ticks: {
+                                font: function (context) {
+                                    let width = context.chart.width;
+                                    if (width <= 430) {
+                                        return {
+                                            size: 6,
+                                        };
+                                    } else {
+                                        return {
+                                            size: 14,
+                                        }
+                                    }
+                                }
+                            },
                             title: {
                                 display: true,
                             }
                         }
+                    },
+                    plugins: {
+                        legend: {
+                            labels: {
+                                font: function (context) {
+                                    let width = context.chart.width;
+                                    if (width <= 430) {
+                                        return {
+                                            size: 8,
+                                        };
+                                    } else {
+                                        return {
+                                            size: 14,
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
-                }
+                },
             });
         } else {
             categoryLocationChart.data.labels = categoryLabels;
@@ -332,3 +379,4 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 });
+
