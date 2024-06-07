@@ -13,6 +13,17 @@
     <link rel="shortcut icon" href="assets/img/vending-machine3.png" type="image/x-icon" style="height: max-content;">
     <link rel="stylesheet" href="assets/css/style.css">
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        @media (max-width: 430px) {
+            .home {
+                overflow-x: hidden !important;
+                max-width: 100%;
+            }
+        }
+
         .toggle-button {
             font-weight: 800;
             position: absolute;
@@ -36,27 +47,9 @@
             display: none;
         }
 
-        .filter-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
         .category-filter {
             display: flex;
             align-items: center;
-        }
-
-        .date-filter {
-            display: flex;
-            align-items: center;
-            margin-right: 30px;
-        }
-
-        .date-filter label,
-        .date-filter input,
-        .date-filter button {
-            margin-left: 10px;
         }
 
         .dark-mode input {
@@ -66,7 +59,7 @@
     </style>
 </head>
 
-<body>
+<body class="product">
     <div class="sidebar close">
         <!-- ========== Logo ============  -->
         <a href="#" class="logo-box">
@@ -170,7 +163,7 @@
                         <div class="card-name">Total Revenue</div>
                     </div>
                     <div class="icon-box">
-                        <i class="bx bx-dollar" style="font-size: 80px;"></i>
+                        <i class="bx bx-dollar"></i>
                     </div>
                 </div>
                 <div class="card">
@@ -179,7 +172,7 @@
                         <div class="card-name">Quantity</div>
                     </div>
                     <div class="icon-box">
-                        <i class="bx bx-archive-in" style="font-size: 80px;"></i>
+                        <i class="bx bx-archive-in"></i>
                     </div>
                 </div>
                 <div class="card">
@@ -188,7 +181,7 @@
                         <div class="card-name">Total Product</div>
                     </div>
                     <div class="icon-box">
-                        <i class="bx bx-shopping-bag" style="font-size: 80px;"></i>
+                        <i class="bx bx-shopping-bag"></i>
                     </div>
                 </div>
                 <div class="card">
@@ -197,7 +190,7 @@
                         <div class="card-name">AVG Sales</div>
                     </div>
                     <div class="icon-box">
-                        <i class="bx bx-chart" style="font-size: 80px;"></i>
+                        <i class="bx bx-chart"></i>
                     </div>
                 </div>
             </div>
@@ -223,24 +216,24 @@
                     </div>
                 </div>
                 <div class="charts">
-                    <div class="chart">
+                    <div class="chart" id="productChart">
                         <h2>Based On Product Category</h2>
                         <canvas id="categoryLocationChart"></canvas>
                     </div>
-                    <div class="chart hidden" id="conclusion" style="height:fit-content; border-style:outset;">
-                        <h2 style=" font-size: x-large;">Conlusion</h2>
-                        <p style="margin-top: -20px">"Product Category"</p>
-                        <article style="text-align: justify; padding:20px; margin-top:30px">
+                    <div class="chart hidden" id="conclusion" style="border-style:outset;">
+                        <h2 id="title">Conlusion</h2>
+                        <p>"Product Category"</p>
+                        <article>
                             <ul>
-                                <li style="font-size: 20px; margin-bottom: 20px">
+                                <li>
                                     1. The food category sold the most with a peak of $4,287 at the
                                     library and had the lowest average price
                                 </li>
-                                <li style="font-size: 20px; margin-bottom: 20px">
+                                <li>
                                     2. carbonated was the second highest average price but second
                                     best selling with a peak of $3267 at guttenplans
                                 </li>
-                                <li style="font-size: 20px;">
+                                <li>
                                     3. the water category is only sold at EB Public Library and
                                     Brunswick Sq Mall locations, it is also the least sold category
                                     with
