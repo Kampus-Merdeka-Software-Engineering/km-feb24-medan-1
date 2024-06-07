@@ -59,7 +59,7 @@
     </style>
 </head>
 
-<body>
+<body class="activeMachine">
     <div class="sidebar close">
         <!-- ========== Logo ============  -->
         <a href="#" class="logo-box">
@@ -163,7 +163,7 @@
                         <div class="card-name">Total Revenue</div>
                     </div>
                     <div class="icon-box">
-                        <i class="bx bx-dollar" style="font-size: 80px;"></i>
+                        <i class="bx bx-dollar"></i>
                     </div>
                 </div>
                 <div class="card">
@@ -172,7 +172,7 @@
                         <div class="card-name">Quantity</div>
                     </div>
                     <div class="icon-box">
-                        <i class="bx bx-archive-in" style="font-size: 80px;"></i>
+                        <i class="bx bx-archive-in"></i>
                     </div>
                 </div>
                 <div class="card">
@@ -181,7 +181,7 @@
                         <div class="card-name">Total Product</div>
                     </div>
                     <div class="icon-box">
-                        <i class="bx bx-shopping-bag" style="font-size: 80px;"></i>
+                        <i class="bx bx-shopping-bag"></i>
                     </div>
                 </div>
                 <div class="card">
@@ -190,7 +190,7 @@
                         <div class="card-name">AVG Sales</div>
                     </div>
                     <div class="icon-box">
-                        <i class="bx bx-chart" style="font-size: 80px;"></i>
+                        <i class="bx bx-chart"></i>
                     </div>
                 </div>
             </div>
@@ -199,7 +199,7 @@
                 <h1>Vending Machine</h1>
                 <p>"Sales Chart"</p>
                 <div class="charts">
-                    <div class="chart">
+                    <div class="chart" id="machineChart">
                         <h2>Based On Active Machine</h2>
                         <form id="machineSearchForm" style="margin-bottom: 20px;">
                             <input type="text" id="machineSearch" placeholder="Search Machine" required
@@ -208,25 +208,24 @@
                         </form>
                         <canvas id="machineMonthChart"></canvas>
                     </div>
-                    <div class="chart hidden" id="conclusion"
-                        style="height:fit-content; border-style:outset; margin-top:80px;">
-                        <h2 style=" font-size: x-large;">Conlusion</h2>
+                    <div class="chart hidden" id="conclusion" style="height:fit-content; border-style:outset;">
+                        <h2 id="title">Conlusion</h2>
                         <p style="margin-top: -20px">"Active Machine"</p>
-                        <article style="text-align: justify; padding:20px; margin-top:30px">
+                        <article>
                             <ul>
-                                <li style="font-size: large; margin-bottom: 20px">
+                                <li>
                                     1. In July there was the highest increase in sales of 346.5
                                     compared to the previous month at GuttenPlans
                                 </li>
-                                <li style="font-size: large; margin-bottom: 20px">
+                                <li>
                                     2. GuttenPlans and EB Public Library are ahead in sales compared
                                     to others and only have one active machine
                                 </li>
-                                <li style="font-size: large; margin-bottom: 20px">
+                                <li>
                                     3. BSQ Mall has 2 active machines but sales are still below
                                     GuttenPlans and EB Public Library
                                 </li>
-                                <li style="font-size: large;">
+                                <li>
                                     4. Vending machines at the EB Public Library began active in
                                     March
                                 </li>
