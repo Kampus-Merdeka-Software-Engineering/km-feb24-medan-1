@@ -28,6 +28,10 @@
     --color_Light2: #c4c4c4;
 }
 
+.dark-mode #dt-length-0 {
+    background-color: var(--color_Dark2);
+}
+
 .dark-mode .box {
     background-color: #1e1e1e;
 }
