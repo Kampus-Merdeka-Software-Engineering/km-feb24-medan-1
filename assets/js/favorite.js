@@ -126,7 +126,6 @@ document.addEventListener('DOMContentLoaded', function () {
     themeToggle.addEventListener("click", () => {
         body.classList.toggle("dark-mode");
         body.classList.toggle("light-mode");
-
         if (body.classList.contains("dark-mode")) {
             themeToggle.innerHTML = "<i class='bx bx-sun'></i>";
             saveThemeToLocalStorage('dark-mode');
@@ -148,7 +147,7 @@ document.addEventListener('DOMContentLoaded', function () {
         .then(response => response.json())
         .then(data => {
             rawData = data;
-            updateCharts('all', 'desc'); // Default sorting order
+            updateCharts('all', 'desc');
             updateTotalValues();
             updateTotalProductsSold();
             updateAverageSales();
@@ -267,6 +266,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     }]
                 },
                 options: {
+                    maintainAspectRatio: false,
                     indexAxis: 'y',
                     responsive: true,
                     plugins: {
