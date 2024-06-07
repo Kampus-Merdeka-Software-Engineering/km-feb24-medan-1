@@ -531,7 +531,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 let width = context.chart.width;
                 if (width <= 430) {
                   return {
-                    size: 6,
+                    size: 8,
                   };
                 } else {
                   return {
@@ -550,7 +550,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 let width = context.chart.width;
                 if (width <= 430) {
                   return {
-                    size: 6,
+                    size: 8,
                   };
                 } else {
                   return {
