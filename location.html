@@ -146,7 +146,7 @@
                         <div class="card-name">Total Revenue</div>
                     </div>
                     <div class="icon-box">
-                        <i class="bx bx-dollar" style="font-size: 80px;"></i>
+                        <i class="bx bx-dollar"></i>
                     </div>
                 </div>
                 <div class="card">
@@ -155,7 +155,7 @@
                         <div class="card-name">Quantity</div>
                     </div>
                     <div class="icon-box">
-                        <i class="bx bx-archive-in" style="font-size: 80px;"></i>
+                        <i class="bx bx-archive-in"></i>
                     </div>
                 </div>
                 <div class="card">
@@ -164,7 +164,7 @@
                         <div class="card-name">Total Product</div>
                     </div>
                     <div class="icon-box">
-                        <i class="bx bx-shopping-bag" style="font-size: 80px;"></i>
+                        <i class="bx bx-shopping-bag"></i>
                     </div>
                 </div>
                 <div class="card">
@@ -173,7 +173,7 @@
                         <div class="card-name">AVG Sales</div>
                     </div>
                     <div class="icon-box">
-                        <i class="bx bx-chart" style="font-size: 80px;"></i>
+                        <i class="bx bx-chart"></i>
                     </div>
                 </div>
             </div>
@@ -190,21 +190,20 @@
                     <option value="water">Water</option>
                 </select>
                 <div class="charts">
-                    <div class="chart" style="width:50%;">
-                        <h2>Based On Product Category</h2>
+                    <div class="chart" id="doughnut-chart">
+                        <h2>Based On Location</h2>
                         <canvas id="locationPieChart"></canvas>
                     </div>
-                    <div class="chart hidden" id="conclusion"
-                        style="height:fit-content; width: 20px; border-style:outset; margin-top:90px;">
-                        <h2 style=" font-size: x-large;">Conlusion</h2>
-                        <p style="margin-top: -20px">"Based on Location"</p>
-                        <article style="text-align: justify; padding:20px; margin-top:30px">
+                    <div class="chart hidden" id="conclusion" style="border-style:outset;">
+                        <h2 id="title">Conclusion</h2>
+                        <p>"Based on Location"</p>
+                        <article>
                             <ul>
-                                <li style="font-size: large; margin-bottom: 20px; margin-right:10px">
+                                <li>
                                     1. The best selling place is GuttenPlans which is a frozen dough
                                     specialist company that operates 24/5
                                 </li>
-                                <li style="font-size: large; margin-bottom: 20px">
+                                <li>
                                     2. The second best selling place is the EB Public Library which
                                     has high foot traffic 5-6 days a week
                                 </li>
@@ -229,7 +228,9 @@
     <script>
         function toggleConclusion() {
             var conclusion = document.getElementById('conclusion');
-            conclusion.classList.toggle('hidden');
+            if (conclusion) {
+                conclusion.classList.toggle('hidden');
+            }
         }
     </script>
 
