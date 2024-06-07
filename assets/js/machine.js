@@ -222,7 +222,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const totalProductsSold = productSet.size;
         document.getElementById('totalProductsSold').textContent = totalProductsSold.toLocaleString();
-        document.getElementById('productsSoldBadge').textContent = totalProductsSold.toLocaleString();
     }
 
     function updateMachineChart(searchQuery) {
@@ -277,6 +276,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 datasets: datasetMachineMonth
             },
             options: {
+                maintainAspectRatio: false,
                 plugins: {
                     legend: {
                         position: 'bottom'
