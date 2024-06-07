@@ -1407,8 +1407,13 @@
         overflow-x: hidden !important;
     }
 
+    .theme-toggle {
+        margin-top: 0px;
+        margin-right: 0px !important;
+    }
+
     .main .chart-container {
-        height: 2560px;
+        height: 2400px;
     }
 
     .main #productChart h2 {
@@ -1453,9 +1458,13 @@
     }
 
     .main #averagePrice {
-        height: 170px;
-        width: 10px;
+        height: 180px;
         margin-left: -15px;
+    }
+
+    .main #averagePriceChart {
+        width: 300px !important;
+        height: 400px !important;
     }
 
     .main #activeMachine h2 {
@@ -1471,7 +1480,8 @@
     }
 
     .main #activeMachine input {
-        width: 45px !important;
+        width: 100px !important;
+        height: 25px;
         margin-left: 10px;
     }
 
@@ -1487,7 +1497,7 @@
 
     #activeMachine {
         height: 500px;
-        margin-top: 500px;
+        margin-top: -250px !important;
         margin-left: -15px;
     }
 
@@ -1798,5 +1808,11 @@
     .activeMachine .chart article {
         text-align: justify;
         padding: 20px;
+    }
+}
+
+@media (max-width: 375px) {
+    .main .home {
+        height: 100%;
     }
 }
