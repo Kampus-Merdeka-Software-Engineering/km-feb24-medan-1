@@ -142,6 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+
 document.addEventListener('DOMContentLoaded', function () {
   let rawData = [];
   let categoryLocationChart, machineMonthChart, locationPieChart, productBarChart, averagePriceChart;
@@ -396,20 +397,72 @@ document.addEventListener('DOMContentLoaded', function () {
         datasets: datasetCategoryLocation
       },
       options: {
+        maintainAspectRatio: false,
         responsive: true,
+        animation: {
+          duration: 800,
+          easing: 'easeOutQuart'
+        },
         scales: {
           x: {
+            ticks: {
+              font: function (context) {
+                let width = context.chart.width;
+                if (width <= 430) {
+                  return {
+                    size: 10,
+                  };
+                } else {
+                  return {
+                    size: 14,
+                  }
+                }
+              }
+            },
             title: {
               display: true,
             }
           },
           y: {
+            ticks: {
+              font: function (context) {
+                let width = context.chart.width;
+                if (width <= 430) {
+                  return {
+                    size: 10,
+                  };
+                } else {
+                  return {
+                    size: 12,
+                  }
+                }
+              }
+            },
             title: {
               display: true,
             }
           }
+        },
+        plugins: {
+          legend: {
+            labels: {
+              font: function (context) {
+                let width = context.chart.width;
+                if (width <= 430) {
+                  return {
+                    bottom: 10,
+                    size: 12,
+                  };
+                } else {
+                  return {
+                    size: 12,
+                  }
+                }
+              }
+            }
+          }
         }
-      }
+      },
     });
 
     // Create the machine-month line chart
@@ -432,10 +485,10 @@ document.addEventListener('DOMContentLoaded', function () {
       options: {
         layout: {
           padding: {
-            left: 20, // Atur jarak kiri
-            right: 20, // Atur jarak kanan
-            top: 20, // Atur jarak atas
-            bottom: 20 // Atur jarak bawah
+            left: 20,
+            right: 20,
+            top: 20,
+            bottom: 20
           }
         },
         responsive: true,
@@ -473,11 +526,39 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         scales: {
           x: {
+            ticks: {
+              font: function (context) {
+                let width = context.chart.width;
+                if (width <= 430) {
+                  return {
+                    size: 6,
+                  };
+                } else {
+                  return {
+                    size: 14,
+                  }
+                }
+              }
+            },
             title: {
               display: true,
             }
           },
           y: {
+            ticks: {
+              font: function (context) {
+                let width = context.chart.width;
+                if (width <= 430) {
+                  return {
+                    size: 6,
+                  };
+                } else {
+                  return {
+                    size: 14,
+                  }
+                }
+              }
+            },
             title: {
               display: true,
             }
@@ -502,6 +583,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }]
       },
       options: {
+        maintainAspectRatio: false,
         indexAxis: 'y',
         responsive: true,
         plugins: {
@@ -615,6 +697,7 @@ document.addEventListener('DOMContentLoaded', function () {
         datasets: datasetMachineMonth
       },
       options: {
+        maintainAspectRatio: false,
         plugins: {
           legend: {
             position: 'bottom'
