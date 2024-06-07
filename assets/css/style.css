@@ -1349,13 +1349,18 @@
         width: 380px;
     }
 
+    .rec-container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
     .rec-card-fill {
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .revenue-details {
         margin-top: 15px;
-        font-size: 14px;
+        font-size: 9px;
         margin-left: 15px;
     }
 
@@ -1365,15 +1370,15 @@
 
 
     .rec-card-fill h3 {
-        font-size: 18px;
-    }
-
-    .rec-card-fill2 {
         font-size: 14px;
     }
 
+    .rec-card-fill2 {
+        font-size: 12px;
+    }
+
     .rec-card-fill2 h3 {
-        font-size: 18px;
+        font-size: 14px;
     }
 
     .main .chart-container {
