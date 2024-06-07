@@ -12,9 +12,21 @@
     <!-- Styles  -->
     <link rel="shortcut icon" href="assets/img/vending-machine3.png" type="image/x-icon" style="height: max-content;">
     <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        @media (max-width: 430px) {
+            .home {
+                overflow-x: hidden !important;
+                max-width: 100%;
+            }
+        }
+    </style>
 </head>
 
-<body>
+<body class="main">
     <div class="sidebar close">
         <!-- ========== Logo ============  -->
         <a href="#" class="logo-box">
@@ -164,13 +176,13 @@
                     <div class="date-filter">
                         <label for="startDate">Start Date:</label>
                         <input type="date" id="startDate">
-                        <label for="endDate" style="margin-left:10px;">End Date:</label>
+                        <label for="endDate">End Date:</label>
                         <input type="date" id="endDate">
                         <button id="filterDateButton">Filter</button>
                     </div>
                 </div>
                 <div class="charts">
-                    <div class="chart">
+                    <div class="chart" id="productChart">
                         <h2>Based On Product Category</h2>
                         <canvas id="categoryLocationChart"></canvas>
                     </div>
@@ -178,15 +190,15 @@
                         <h2>Based On Location</h2>
                         <canvas id="locationPieChart"></canvas>
                     </div>
-                    <div class="chart">
+                    <div class="chart" id="topProduct">
                         <h2>Top 10 Favorite Product</h2>
                         <canvas id="productBarChart"></canvas>
                     </div>
-                    <div class="chart" style="height: 575px; padding:10px">
+                    <div class="chart" id="averagePrice" style="padding:10px">
                         <h2>Average Product Price</h2>
                         <canvas id="averagePriceChart"></canvas>
                     </div>
-                    <div class="chart">
+                    <div class="chart" id="activeMachine">
                         <h2>Based On Active Machine</h2>
                         <input type="text" id="machineSearch" placeholder="Search Machine"
                             style="margin-bottom: 20px; width: 30%;">
