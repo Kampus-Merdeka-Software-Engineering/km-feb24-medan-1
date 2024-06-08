@@ -505,7 +505,18 @@ document.addEventListener('DOMContentLoaded', function () {
                 return `${context.label}: ${value} (${percentage}%)`;
               }
             }
-          }
+          },
+          labels: {
+                        render: 'percentage',
+                        fontColor: ['white', 'white', 'white', 'white'],
+                        precision: 2,
+                        fontStyle: 'bold',
+                        fontSize: 14,
+                        fontFamily: '"Lucida Console", Monaco, monospace',
+                        textShadow: true,
+                        shadowColor: 'rgba(0,0,0,0.3)',
+                        shadowBlur: 5,
+                    }
         }
       }
     });
