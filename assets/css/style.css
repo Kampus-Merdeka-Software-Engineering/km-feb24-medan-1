@@ -425,7 +425,7 @@
     top: 3%;
     transform: translateY(-50%);
     background: var(--color_Light1);
-    border-style: double;
+    border-color: #1e1e1e;
     cursor: pointer;
     font-size: 24px;
     z-index: 1000;
