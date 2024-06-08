@@ -369,7 +369,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Prepare data for the location pie chart
     const locationPieLabels = ["GuttenPlans", "EB Public Library", "Brunswick Sq Mall", "Earle Asphalt"];
-    const locationPieData = locationPieLabels.map(location => salesByLocation[location]);
+    const locationPieData = locationPieLabels.map(location => salesByLocation[location] || 0);
 
     // Prepare data for the product bar chart
     const sortedProducts = Object.entries(salesByProduct)
