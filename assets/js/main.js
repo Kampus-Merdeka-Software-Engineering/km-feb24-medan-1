@@ -487,14 +487,14 @@ document.addEventListener('DOMContentLoaded', function () {
           padding: {
             left: 20,
             right: 20,
-            top: 20,
-            bottom: 20
+            top: 0,
+            bottom: 0
           }
         },
         responsive: true,
         plugins: {
           legend: {
-            position: '',
+            position: 'top',
           },
           tooltip: {
             callbacks: {
